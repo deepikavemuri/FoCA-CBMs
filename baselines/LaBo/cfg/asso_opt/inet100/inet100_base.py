@@ -3,7 +3,7 @@ _base_ = "../base.py"
 proj_name = "inet100"
 concept_root = "datasets/inet100/concepts/"
 img_split_path = "datasets/inet100/splits"
-img_path = "./../DATA/inet100"
+img_path = "././DATA/inet100"
 concept_type = "all"
 
 img_ext = ""

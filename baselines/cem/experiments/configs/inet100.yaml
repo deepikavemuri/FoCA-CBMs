@@ -9,7 +9,7 @@ shared_params:
     batch_size: 256
 
     # DATASET VARIABLES
-    root_dir: ./../DATA/inet100/
+    root_dir: ././DATA/inet100/
     sampling_percent: 1
     test_subsampling: 1
     weight_loss: False

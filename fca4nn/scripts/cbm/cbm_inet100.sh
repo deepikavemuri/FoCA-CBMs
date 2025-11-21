@@ -7,8 +7,8 @@ CUDA_VISIBLE_DEVICES=$gpu_id python train_cbm.py \
                 --dataset imagenet100 \
                 --model resnet50 \
                 --concept_wts 0.01 \
-                --data_dir ./../DATA/inet100/ \
-                --concept_file ./../DATA/concepts/inet100_concepts.json \
+                --data_dir ././DATA/inet100/ \
+                --concept_file ././DATA/concepts/inet100_concepts.json \
                 --lr 1e-4 \
                 --epochs 75 \
                 --batch_size 256 \

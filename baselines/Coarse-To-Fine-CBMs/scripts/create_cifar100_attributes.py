@@ -11,9 +11,9 @@ import numpy as np
 from pathlib import Path
 
 # Paths
-json_path = './DATA/cifar100/cifar100_concepts.json'
-output_dir = Path('./DATA/concept_sets_low/CIFAR100')
-classes_file = './DATA/concept_sets_high/CIFAR100/cifar100_classes.txt'
+json_path = '/DATA/cifar100/cifar100_concepts.json'
+output_dir = Path('/DATA/concept_sets_low/CIFAR100')
+classes_file = '/DATA/concept_sets_high/CIFAR100/cifar100_classes.txt'
 
 # Create output directory if it doesn't exist
 output_dir.mkdir(parents=True, exist_ok=True)

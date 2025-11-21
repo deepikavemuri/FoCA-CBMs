@@ -11,9 +11,9 @@ do
                 --model resnet18 \
                 --concept_wts 0.01 \
                 --cls_wts 0.01 \
-                --data_root ./../DATA/Animals_with_Attributes2/ \
-                --concept_file ./../DATA/concepts/awa2_concepts.json \
-                --lattice_path ./../DATA/lattices/awa2_context.pkl \
+                --data_root ././DATA/Animals_with_Attributes2/ \
+                --concept_file ././DATA/concepts/awa2_concepts.json \
+                --lattice_path ././DATA/lattices/awa2_context.pkl \
                 --num_clfs 2 \
                 --lattice_levels 1 2 \
                 --backbone_layer_ids 2 4\

@@ -11,12 +11,12 @@ base_path = ""
 # the paths for the datasets
 datasets_paths = {
     "imagenet": base_path + "data/imagenet",
-    "cub": "./DATA/CUB_200_2011",
+    "cub": "/DATA/CUB_200_2011",
     "places365": base_path + "data/places365",
     "sun": base_path + "data/SUN",
-    "imagenet100": "./../DATA/inet100",
-    "awa2": "./../DATA/Animals_with_Attributes2_imagefolder",
-    "cifar100": "./../DATA/cifar100",
+    "imagenet100": "././DATA/inet100",
+    "awa2": "././DATA/Animals_with_Attributes2_imagefolder",
+    "cifar100": "././DATA/cifar100",
 }
 
 # the class labels for each set

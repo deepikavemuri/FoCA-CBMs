@@ -11,9 +11,9 @@ do
                 --model resnet50 \
                 --concept_wts 0.01 \
                 --cls_wts 0.01 \
-                --data_root ./../DATA/cifar100/ \
-                --concept_file ./../DATA/concepts/cifar100_concepts.json \
-                --lattice_path ./../DATA/lattices/cifar100_context.pkl \
+                --data_root ././DATA/cifar100/ \
+                --concept_file ././DATA/concepts/cifar100_concepts.json \
+                --lattice_path ././DATA/lattices/cifar100_context.pkl \
                 --num_clfs 2 \
                 --lattice_levels 1 2 \
                 --backbone_layer_ids 3 4 \

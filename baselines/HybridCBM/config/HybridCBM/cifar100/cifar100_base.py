@@ -2,7 +2,7 @@ _base_ = "../base.py"
 
 # dataset
 dataset = "cifar100"
-data_root = f"./../DATA/cifar100_images"
+data_root = f"././DATA/cifar100_images"
 
 num_class = 100
 

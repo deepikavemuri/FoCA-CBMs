@@ -2,7 +2,7 @@ _base_ = "../base.py"
 
 # dataset
 dataset = "awa2"
-data_root = f"./../DATA/{dataset}"
+data_root = f"././DATA/{dataset}"
 
 num_class = 50
 

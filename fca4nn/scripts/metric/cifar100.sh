@@ -5,8 +5,8 @@ CUDA_VISIBLE_DEVICES=$gpu_id python metric_calculator.py \
             --dataset cifar100 \
             --model_name OURS-1FCA::vit_base_patch16_224 \
             --model_weights < model_weights_paths > \
-            --data_path ./../DATA/cifar100/ \
-            --lattice_path ./../DATA/lattices/cifar100_context.pkl \
+            --data_path ././DATA/cifar100/ \
+            --lattice_path ././DATA/lattices/cifar100_context.pkl \
             --lattice_levels 1 \
             --backbone_layer_ids 11 \
             --metadata_path ./saved_models/metric_metadata/ \

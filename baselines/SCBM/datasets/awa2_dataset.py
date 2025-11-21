@@ -28,7 +28,7 @@ def get_AwA2_CBM_dataloader(datapath):
 class AnimalLoader(Dataset):
     def __init__(
         self,
-        data_dir="./DATA/AWA2/Animals_with_Attributes2",
+        data_dir="/DATA/AWA2/Animals_with_Attributes2",
         transform=None,
         split="train",
         apply_corruption=False,

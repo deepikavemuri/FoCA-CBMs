@@ -12,15 +12,15 @@ def encode_image(image_path):
 def get_class_from_dataset(dataset):
     if dataset == "awa2":
         x = pd.read_csv(
-            f"/home/ec2-user/sayantaa/fca4nn/DATA/Animals_with_Attributes2/concepts/concepts.csv"
+            f"/DATA/Animals_with_Attributes2/concepts/concepts.csv"
         )
     elif dataset == "cifar100":
         x = pd.read_csv(
-            f"/home/ec2-user/sayantaa/fca4nn/DATA/cifar100_images/concepts/concepts.csv"
+            f"/DATA/cifar100_images/concepts/concepts.csv"
         )
     elif dataset == "inet100":
         x = pd.read_csv(
-            f"/home/ec2-user/sayantaa/fca4nn/DATA/inet100/concepts/concepts.csv"
+            f"/DATA/inet100/concepts/concepts.csv"
         )
     # example = x.iloc[:3]
     x = x[["class", "label"]].drop_duplicates()

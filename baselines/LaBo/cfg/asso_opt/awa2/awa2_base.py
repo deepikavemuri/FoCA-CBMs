@@ -3,7 +3,7 @@ _base_ = "../base.py"
 proj_name = "awa2"
 concept_root = "datasets/awa2/concepts/"
 img_split_path = "datasets/awa2/splits"
-img_path = "./../DATA/Animals_with_Attributes2"
+img_path = "././DATA/Animals_with_Attributes2"
 concept_type = "all"
 
 img_ext = ""

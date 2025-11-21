@@ -11,7 +11,7 @@ do
         CUDA_VISIBLE_DEVICES=$gpu_id python learn_concepts_multimodal.py \
                         --classes=$dataset \
                         --backbone-name="clip:RN50" \
-                        --concept_list="./DATA/concepts/${dataset}_concepts.txt" \
+                        --concept_list="/DATA/concepts/${dataset}_concepts.txt" \
                         --out-dir=$OUTPUT_DIR \
                         > "${OUTPUT_DIR}/learn_concepts_multimodal_rn50_${dataset}_seed_${seed}.log"
 

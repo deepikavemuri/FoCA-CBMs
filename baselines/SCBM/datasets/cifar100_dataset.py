@@ -91,8 +91,8 @@ def get_CIFAR100_CBM_dataloader(datapath):
 class Cifar100Loader(Dataset):
     def __init__(
             self,
-            data_dir='./DATA/cifar100',
-            json_file='./DATA/cifar100/cifar100_concepts_filtered_700.json', 
+            data_dir='/DATA/cifar100',
+            json_file='/DATA/cifar100/cifar100_concepts_filtered_700.json', 
             split='train',
             transforms=None,
         ):

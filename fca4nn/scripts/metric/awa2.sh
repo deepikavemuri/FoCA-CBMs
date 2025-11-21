@@ -5,8 +5,8 @@ CUDA_VISIBLE_DEVICES=$gpu_id python metric_calculator.py \
             --dataset awa2 \
             --model_name VIT::deit_base_patch16_224 \
             --model_weights < model_weights_paths > \
-            --data_path ./../DATA/Animals_with_Attributes2/ \
-            --lattice_path ./../DATA/lattices/awa2_context.pkl \
+            --data_path ././DATA/Animals_with_Attributes2/ \
+            --lattice_path ././DATA/lattices/awa2_context.pkl \
             --lattice_levels 1 3 \
             --backbone_layer_ids 3 4 \
             --metadata_path ./saved_models/metric_metadata/ \

@@ -10,8 +10,8 @@ do
                     --dataset cifar100 \
                     --model resnet50 \
                     --concept_wts 0.1 \
-                    --data_dir ./../DATA/cifar100/ \
-                    --concept_file ./../DATA/concepts/cifar100_concepts.json \
+                    --data_dir ././DATA/cifar100/ \
+                    --concept_file ././DATA/concepts/cifar100_concepts.json \
                     --lr 3e-4 \
                     --epochs 75 \
                     --batch_size 256 \

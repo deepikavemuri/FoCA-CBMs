@@ -2,8 +2,8 @@
 import numpy as np
 import os
 
-in_path = './DATA/AWA2/Animals_with_Attributes2/predicate-matrix-binary.txt'
-out_path = './DATA/concept_sets_low/AwA2/awa2_attrs_per_class_binary_85.npy'
+in_path = '/DATA/AWA2/Animals_with_Attributes2/predicate-matrix-binary.txt'
+out_path = '/DATA/concept_sets_low/AwA2/awa2_attrs_per_class_binary_85.npy'
 
 with open(in_path, 'r') as f:
     lines = [l.strip() for l in f if l.strip()]

@@ -5,8 +5,8 @@ CUDA_VISIBLE_DEVICES=$gpu_id python metric_calculator.py \
             --dataset inet100 \
             --model_name SCBM::resnet50 \
             --model_weights < model_weights_paths > \
-            --data_path ./../DATA/inet100/ \
-            --lattice_path ./../DATA/lattices/inet100_context.pkl \
+            --data_path ././DATA/inet100/ \
+            --lattice_path ././DATA/lattices/inet100_context.pkl \
             --lattice_levels 1 3\
             --backbone_layer_ids 3 4 \
             --metadata_path ./saved_models/metric_metadata/ \

@@ -11,14 +11,14 @@ import clip
 from pytorchcv.model_provider import get_model as ptcv_get_model
 
 DATASET_ROOTS = {
-    "imagenet100_train": "./../DATA/inet100/train/",
-    "imagenet100_val": "./../DATA/inet100/val/",
-    "imagenet100_test": "./../DATA/inet100/test_set/",
+    "imagenet100_train": "././DATA/inet100/train/",
+    "imagenet100_val": "././DATA/inet100/val/",
+    "imagenet100_test": "././DATA/inet100/test_set/",
 }
 
 LABEL_FILES = {
-    "imagenet100": "./../DATA/classes/inet100_classes.txt",
-    "awa2": "./../DATA/classes/awa2_classes.txt",
+    "imagenet100": "././DATA/classes/inet100_classes.txt",
+    "awa2": "././DATA/classes/awa2_classes.txt",
 }
 
 

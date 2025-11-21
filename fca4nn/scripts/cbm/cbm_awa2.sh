@@ -10,8 +10,8 @@ do
                     --dataset awa2 \
                     --model resnet18 \
                     --concept_wts 0.1 \
-                    --data_dir ./../DATA/Animals_with_Attributes2/ \
-                    --concept_file ./../DATA/concepts/awa2_concepts.json \
+                    --data_dir ././DATA/Animals_with_Attributes2/ \
+                    --concept_file ././DATA/concepts/awa2_concepts.json \
                     --lr 3e-4 \
                     --epochs 75 \
                     --batch_size 256 \

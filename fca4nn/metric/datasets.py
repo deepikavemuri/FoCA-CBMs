@@ -19,9 +19,9 @@ from torchvision.transforms import (
 )
 
 
-INET100_DATA_DIR = "./../DATA/inet100"
-AWA2_DATA_DIR = "./../DATA/awa2"
-CIFAR100_DATA_DIR = "./../DATA/cifar100"
+INET100_DATA_DIR = "././DATA/inet100"
+AWA2_DATA_DIR = "././DATA/awa2"
+CIFAR100_DATA_DIR = "././DATA/cifar100"
 
 
 class Cifar100Dataset(Dataset):

@@ -9,7 +9,7 @@ shared_params:
     batch_size: 256
 
     # DATASET VARIABLES
-    root_dir: ./../DATA/Animals_with_Attributes2/
+    root_dir: ././DATA/Animals_with_Attributes2/
     sampling_percent: 1
     test_subsampling: 1
     weight_loss: False

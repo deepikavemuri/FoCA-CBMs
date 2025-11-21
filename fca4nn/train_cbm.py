@@ -227,7 +227,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--concept_file",
         type=str,
-        default="./DATA/imagenet100_concept.json",
+        default="/DATA/imagenet100_concept.json",
         help="Path to concept file",
     )
     parser.add_argument(

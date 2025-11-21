@@ -83,14 +83,14 @@ class Config(BaseConfig):
 
     @staticmethod
     def generate_config(config):
-        translator_path = f"/home/ec2-user/sayantaa/fca4nn/baselines/HybridCBM/saved_models/translator.pt"
+        translator_path = f"/baselines/HybridCBM/saved_models/translator.pt"
         data_root = f"datasets/{config.dataset}"
         if config.dataset == "awa2":
-            data_root = "/home/ec2-user/sayantaa/fca4nn/DATA/Animals_with_Attributes2"
+            data_root = "/DATA/Animals_with_Attributes2"
         elif config.dataset == "cifar100":
-            data_root = "/home/ec2-user/sayantaa/fca4nn/DATA/cifar100_images"
+            data_root = "/DATA/cifar100_images"
         elif config.dataset == "inet100":
-            data_root = "/home/ec2-user/sayantaa/fca4nn/DATA/inet100"
+            data_root = "/DATA/inet100"
         num_dynamic_concept = round(
             config.num_class
             * config.num_concept_per_class

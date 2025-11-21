@@ -126,7 +126,7 @@ N_CONCEPTS = 700
 N_CLASSES = len(CIFAR100_CLASSES)
 
 CONCEPTS_PATH = (
-    "/raid/ai24mtech12011/sayanta/fca4nn/DATA/concepts/cifar100_concept_matrix.npy"
+    "/DATA/concepts/cifar100_concept_matrix.npy"
 )
 
 
