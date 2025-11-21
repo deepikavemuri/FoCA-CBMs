@@ -206,8 +206,6 @@ def change_class_to_id(
     class_level_json_path="./data/inet100/imagenet100.json",
     class_level_output_json_path="./data/inet100/imagenet100_id2cons.json",
 ):
-    # class_level_json_path = '/data1/ai22resch11001/projects/data/inet100/imagenet100.json'
-    # class_level_output_json_path = '/data1/ai22resch11001/projects/data/inet100/imagenet100_id2cons.json'
     with open(class_level_json_path, "r") as file:
         json_data = json.load(file)
 
@@ -329,7 +327,7 @@ def split_csv():
 
     # df['id'] = range(1, len(df) + 1)
     # df_fc = df[['id', 'intent', 'extent', 'level']]
-    # df_fc.to_csv('/DATA/ai22resch11001/projects/data/inet100/inet100_formal_concepts.csv', index=False)
+    # df_fc.to_csv('./data/inet100/inet100_formal_concepts.csv', index=False)
 
     # Group by `class` and create a list of `id`s for each class
     class2ids = (
