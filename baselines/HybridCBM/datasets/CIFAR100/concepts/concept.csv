@@ -1,0 +1,1623 @@
+class,label,concept
+apple,0,plant
+apple,0,a smooth surface
+apple,0,fruit
+apple,0,a small leaf at the top
+apple,0,a long stem
+apple,0,flower
+apple,0,a knife
+apple,0,person
+apple,0,Food
+apple,0,leaves
+apple,0,a branch
+apple,0,"smooth, green skin"
+apple,0,a round shape
+apple,0,"a red, green, or yellow color"
+aquarium fish,1,a filter
+aquarium fish,1,plant
+aquarium fish,1,animal
+aquarium fish,1,large fins
+aquarium fish,1,aquatic animal
+aquarium fish,1,Food
+aquarium fish,1,a heater
+aquarium fish,1,a light
+aquarium fish,1,a net
+aquarium fish,1,can live in a confined space
+aquarium fish,1,tiny mouth
+aquarium fish,1,a round shape
+aquarium fish,1,vertebrate
+aquarium fish,1,"a long, thick tail"
+baby,2,animal
+baby,2,"a small, pointed nose"
+baby,2,a blanket
+baby,2,a pacifier
+baby,2,"a large, round head"
+baby,2,tiny feet
+baby,2,a diaper
+baby,2,a round shape
+baby,2,a toy
+baby,2,tiny mouth
+baby,2,mammal
+baby,2,"large, black eyes"
+baby,2,a crib
+baby,2,a stroller
+baby,2,a parent
+baby,2,human
+bear,3,a cave
+bear,3,"a large, muscular body"
+bear,3,animal
+bear,3,a river
+bear,3,a large number of trees
+bear,3,"a large, round head"
+bear,3,a pointed snout
+bear,3,many legs
+bear,3,furry coat
+bear,3,a honeycomb
+bear,3,mammal
+bear,3,berries
+bear,3,a large size
+bear,3,vertebrate
+bear,3,sharp claws
+beaver,4,a kit
+beaver,4,"a large, muscular body"
+beaver,4,animal
+beaver,4,a river
+beaver,4,a large number of trees
+beaver,4,logs
+beaver,4,a lodge
+beaver,4,webbed feet
+beaver,4,person
+beaver,4,"short, velvety fur"
+beaver,4,"large, sharp teeth"
+beaver,4,mammal
+beaver,4,"a long, thick tail"
+beaver,4,a family
+beaver,4,vertebrate
+beaver,4,a dam
+beaver,4,"a small, rodent-like body"
+bed,5,a mattress
+bed,5,a comforter
+bed,5,a blanket
+bed,5,a alarm clock
+bed,5,a pillow
+bed,5,a headboard
+bed,5,a nightstand
+bed,5,a bed frame
+bed,5,a box spring
+bed,5,furniture
+bed,5,intended for sleeping on
+bed,5,a footboard
+bed,5,"a large, flat surface"
+bed,5,object
+bee,6,animal
+bee,6,arthropod
+bee,6,flower
+bee,6,many legs
+bee,6,a bee suit
+bee,6,a smoker
+bee,6,a bed frame
+bee,6,gloves
+bee,6,a hive tool
+bee,6,antennae
+bee,6,a beekeeper
+bee,6,a super
+bee,6,a round shape
+bee,6,two pairs of wings
+bee,6,a insect
+bee,6,black and yellow stripes
+bee,6,a veil
+beetle,7,a magnifying glass
+beetle,7,animal
+beetle,7,a pin
+beetle,7,arthropod
+beetle,7,wing covers
+beetle,7,a jar
+beetle,7,antennae
+beetle,7,various sizes and shapes
+beetle,7,a small leaf at the top
+beetle,7,"a small, hard shell"
+beetle,7,often brightly colored
+beetle,7,a segmented body
+beetle,7,dirt
+beetle,7,many legs
+beetle,7,person
+beetle,7,a rock
+beetle,7,a insect
+beetle,7,a bug
+beetle,7,two feelers
+beetle,7,a tweezers
+beetle,7,a hard exoskeleton
+bicycle,8,a bicycle seat
+bicycle,8,a lock
+bicycle,8,two wheels of equal size
+bicycle,8,mode of transportation
+bicycle,8,a tire
+bicycle,8,a bed frame
+bicycle,8,a frame connecting the wheels
+bicycle,8,pedals attached to the frame
+bicycle,8,a pedal
+bicycle,8,a chain
+bicycle,8,a handlebar
+bicycle,8,a helmet
+bicycle,8,a seat affixed to the frame
+bicycle,8,object
+bottle,9,a long neck
+bottle,9,container
+bottle,9,a label or design
+bottle,9,a napkin
+bottle,9,a coaster
+bottle,9,a sturdy base
+bottle,9,a bottle opener
+bottle,9,a screw-top or corked top
+bottle,9,"a tall, slender shape"
+bottle,9,person
+bottle,9,a sturdy build
+bottle,9,a glass
+bottle,9,a drink
+bottle,9,a small opening at the top
+bottle,9,a bar
+bottle,9,a round shape
+bottle,9,object
+bowl,10,container
+bowl,10,a smooth surface
+bowl,10,a forked tail
+bowl,10,a rim around the top
+bowl,10,person
+bowl,10,Food
+bowl,10,a spoon
+bowl,10,a kitchen
+bowl,10,a food dish
+bowl,10,a small opening at the top
+bowl,10,a round shape
+bowl,10,a deep body
+bowl,10,object
+boy,11,wears clothes
+boy,11,a toy
+boy,11,gloves
+boy,11,a skateboard
+boy,11,a playground
+boy,11,a helmet
+boy,11,a baseball
+boy,11,has a short haircut
+boy,11,a male human child
+boy,11,a hat
+boy,11,a basketball
+boy,11,between the ages of 0 and 12
+boy,11,a pants
+boy,11,shoes
+boy,11,person
+boy,11,a school
+boy,11,a shirt
+boy,11,has a gender
+boy,11,male
+boy,11,has a boyish face
+boy,11,a scooter
+boy,11,a soccer ball
+bridge,12,a structure that spans a gap
+bridge,12,a body of water
+bridge,12,a vehicle
+bridge,12,a river
+bridge,12,a sidewalk
+bridge,12,person
+bridge,12,structure
+bridge,12,object
+bus,13,a bus fare
+bus,13,"a long, slender body"
+bus,13,a bus shelter
+bus,13,lots of windows
+bus,13,a bus lane
+bus,13,mode of transportation
+bus,13,multiple rows of windows
+bus,13,"a large, rectangular shape"
+bus,13,a bus sign
+bus,13,a long length
+bus,13,two doors
+bus,13,a large size
+bus,13,object
+butterfly,14,animal
+butterfly,14,a small leaf at the top
+butterfly,14,arthropod
+butterfly,14,flower
+butterfly,14,person
+butterfly,14,"two large, wings"
+butterfly,14,a small head
+butterfly,14,brightly colored wings
+butterfly,14,antennae
+butterfly,14,two pairs of wings
+butterfly,14,a insect
+camel,15,a long neck
+camel,15,a rider
+camel,15,animal
+camel,15,a oasis
+camel,15,a saddle
+camel,15,a caravan
+camel,15,a desert
+camel,15,a lead
+camel,15,mammal
+camel,15,short legs
+camel,15,"a long, thick tail"
+camel,15,a bridle
+camel,15,vertebrate
+camel,15,sand
+camel,15,a hump
+can,16,container
+can,16,a compost bin
+can,16,a fridge
+can,16,a can opener
+can,16,a label or design
+can,16,usually has a lid
+can,16,"a long, cylindrical shape"
+can,16,a trash can
+can,16,a pop-top or screw-top lid
+can,16,person
+can,16,a metal or plastic body
+can,16,a kitchen
+can,16,a meal
+can,16,a small opening at the top
+can,16,a cupboard
+can,16,object
+castle,17,several towers or turrets
+castle,17,structure
+castle,17,a moat
+castle,17,"a large, imposing structure"
+castle,17,a drawbridge
+castle,17,a gate
+castle,17,a tower
+castle,17,building
+castle,17,stone walls
+castle,17,man-made object
+castle,17,made of stone or brick
+castle,17,a keep
+castle,17,a wall
+castle,17,a courtyard
+castle,17,a portcullis
+castle,17,object
+caterpillar,18,plant
+caterpillar,18,often has stripes or spots
+caterpillar,18,animal
+caterpillar,18,arthropod
+caterpillar,18,a small leaf at the top
+caterpillar,18,leaves
+caterpillar,18,soil
+caterpillar,18,a small head
+caterpillar,18,often brightly colored
+caterpillar,18,a segmented body
+caterpillar,18,flower
+caterpillar,18,dirt
+caterpillar,18,many legs
+caterpillar,18,a rock
+caterpillar,18,a cocoon
+caterpillar,18,a lawn
+caterpillar,18,"a tall, slender shape"
+caterpillar,18,a insect
+caterpillar,18,can be a variety of colors
+cattle,19,animal
+cattle,19,a mottled brown or black coat
+cattle,19,hooves
+cattle,19,a milkmaid
+cattle,19,a bull
+cattle,19,"a small, pointed muzzle"
+cattle,19,a fence
+cattle,19,many legs
+cattle,19,"a long, thick tail"
+cattle,19,a large size
+cattle,19,horns
+cattle,19,a farmer
+cattle,19,vertebrate
+cattle,19,a lawn
+cattle,19,a pasture
+cattle,19,"a large, round head"
+cattle,19,a calf
+cattle,19,mammal
+cattle,19,a barn
+chair,20,a desk
+chair,20,a rider
+chair,20,a office
+chair,20,a computer
+chair,20,person
+chair,20,many legs
+chair,20,armrests on either side
+chair,20,a living room
+chair,20,a dirty floor
+chair,20,legs to support the seat
+chair,20,furniture
+chair,20,a backrest
+chair,20,object
+chimpanzee,21,animal
+chimpanzee,21,"a large, muscular body"
+chimpanzee,21,a blanket
+chimpanzee,21,Food
+chimpanzee,21,a toy
+chimpanzee,21,fur covering the body
+chimpanzee,21,ape
+chimpanzee,21,a jungle
+chimpanzee,21,a large number of trees
+chimpanzee,21,leaves
+chimpanzee,21,a small head
+chimpanzee,21,a bucket
+chimpanzee,21,"a small, pointed muzzle"
+chimpanzee,21,a zoo
+chimpanzee,21,"large, black eyes"
+chimpanzee,21,"a long, thick tail"
+chimpanzee,21,fruit
+chimpanzee,21,a branch
+chimpanzee,21,"a small, furry body"
+chimpanzee,21,a keeper
+chimpanzee,21,mammal
+chimpanzee,21,a cage
+chimpanzee,21,long arms
+chimpanzee,21,short legs
+clock,22,hands
+clock,22,a desk
+clock,22,a second hand
+clock,22,an electrical outlet
+clock,22,"a large, rectangular shape"
+clock,22,a nightstand
+clock,22,time
+clock,22,a battery
+clock,22,a wall
+clock,22,an hour hand
+clock,22,numbers
+clock,22,a round shape
+clock,22,timepiece
+clock,22,object
+cloud,23,a sun
+cloud,23,rain
+cloud,23,floating in the sky
+cloud,23,phenomenon
+cloud,23,lightning
+cloud,23,weather
+cloud,23,sky
+cloud,23,a plane
+cloud,23,a star
+cloud,23,a moon
+cloud,23,"a fluffy, white appearance"
+cloud,23,birds
+cloud,23,atmosphere
+cloud,23,thunder
+cockroach,24,animal
+cockroach,24,arthropod
+cockroach,24,gloves
+cockroach,24,antennae
+cockroach,24,a wall
+cockroach,24,"long, antennae-like feelers"
+cockroach,24,a trash can
+cockroach,24,a dirty floor
+cockroach,24,a small head
+cockroach,24,a roach trap
+cockroach,24,two pairs of wings
+cockroach,24,a segmented body
+cockroach,24,many legs
+cockroach,24,"long, powerful hind legs"
+cockroach,24,a light color
+cockroach,24,a spray bottle
+cockroach,24,a black mask around the eyes
+cockroach,24,a kitchen
+cockroach,24,a roach motel
+cockroach,24,a round shape
+cockroach,24,a insect
+cockroach,24,a can of Raid
+couch,25,plenty of space for seating
+couch,25,a blanket
+couch,25,armrests on either side
+couch,25,person
+couch,25,"a large, rectangular shape"
+couch,25,a comfortable design
+couch,25,a coffee table
+couch,25,a living room
+couch,25,a pillow
+couch,25,furniture
+couch,25,"a soft, upholstered surface"
+couch,25,"a rough, craggy surface"
+couch,25,a backrest
+couch,25,a remote control
+couch,25,object
+crab,26,animal
+crab,26,seaweed
+crab,26,arthropod
+crab,26,a bib
+crab,26,a red or orange color
+crab,26,a crabbing net
+crab,26,"a small, hard shell"
+crab,26,a bucket
+crab,26,bait
+crab,26,person
+crab,26,many legs
+crab,26,two small eyes on stalks
+crab,26,a net
+crab,26,a crab pot
+crab,26,invertebrate
+crab,26,a beach
+crab,26,two large claws
+crab,26,a lobster trap
+crab,26,a hard exoskeleton
+crocodile,27,carnivore
+crocodile,27,"a long, slender body"
+crocodile,27,animal
+crocodile,27,a beach
+crocodile,27,a swamp
+crocodile,27,logs
+crocodile,27,a river
+crocodile,27,a pointed snout
+crocodile,27,"large, sharp teeth"
+crocodile,27,a pond
+crocodile,27,greenish-brown color
+crocodile,27,a rock
+crocodile,27,water
+crocodile,27,"a large, gray body"
+crocodile,27,"a long, thick tail"
+crocodile,27,vertebrate
+crocodile,27,short legs
+cup,28,container
+cup,28,a napkin
+cup,28,usually has a lid
+cup,28,a handle for steering
+cup,28,sugar
+cup,28,a sturdy base
+cup,28,tea
+cup,28,a saucer
+cup,28,a spoon
+cup,28,a rim around the top
+cup,28,milk
+cup,28,a glass
+cup,28,coffee
+cup,28,a round shape
+cup,28,object
+dinosaur,29,a long neck
+dinosaur,29,a reptilian appearance
+dinosaur,29,scales on the skin
+dinosaur,29,animal
+dinosaur,29,a statue
+dinosaur,29,a museum
+dinosaur,29,a large size
+dinosaur,29,many legs
+dinosaur,29,a book
+dinosaur,29,a teacher
+dinosaur,29,a small head
+dinosaur,29,a male human child
+dinosaur,29,"a long, thick tail"
+dinosaur,29,a camera
+dinosaur,29,vertebrate
+dinosaur,29,bones
+dinosaur,29,short legs
+dolphin,30,a tail
+dolphin,30,"a small, pointed nose"
+dolphin,30,animal
+dolphin,30,large fins
+dolphin,30,seaweed
+dolphin,30,aquatic animal
+dolphin,30,person
+dolphin,30,a dorsal fin
+dolphin,30,"a large, gray body"
+dolphin,30,a boat
+dolphin,30,"smooth, green skin"
+dolphin,30,mammal
+dolphin,30,"a long, thick tail"
+dolphin,30,vertebrate
+dolphin,30,flippers on the sides
+elephant,31,animal
+elephant,31,a circus
+elephant,31,"a large, gray body"
+elephant,31,a safari
+elephant,31,a trainer
+elephant,31,a river
+elephant,31,a zoo
+elephant,31,person
+elephant,31,many legs
+elephant,31,"a long, slender trunk"
+elephant,31,a light color
+elephant,31,a large size
+elephant,31,"a long, thick tail"
+elephant,31,vertebrate
+elephant,31,a ring
+elephant,31,a peanut
+elephant,31,a lead
+elephant,31,mammal
+elephant,31,large ears
+elephant,31,a soccer ball
+flatfish,32,a reel
+flatfish,32,a body of water
+flatfish,32,a sandy or brown coloration
+flatfish,32,animal
+flatfish,32,usually cryptic coloration
+flatfish,32,bait
+flatfish,32,a bottom-dwelling lifestyle
+flatfish,32,a hook
+flatfish,32,a pond
+flatfish,32,a rod
+flatfish,32,a net
+flatfish,32,a flattened body
+flatfish,32,a triangular shape
+flatfish,32,usually bottom-dwelling
+flatfish,32,sand
+flatfish,32,vertebrate
+flatfish,32,lateral symmetry
+forest,33,dense vegetation
+forest,33,shade from the trees
+forest,33,habitat
+forest,33,a path
+forest,33,a large number of trees
+forest,33,biome
+forest,33,a deer
+forest,33,dirt
+forest,33,leaves
+forest,33,a rock
+forest,33,wildlife
+forest,33,ecosystem
+forest,33,bushes
+forest,33,a trail
+forest,33,birds
+forest,33,a stream
+forest,33,"a fresh, earthy smell"
+forest,33,a leafy floor
+fox,34,orange or red fur
+fox,34,"a small, pointed nose"
+fox,34,chordate
+fox,34,animal
+fox,34,a vixen
+fox,34,a large number of trees
+fox,34,large ears
+fox,34,a mate
+fox,34,cubs
+fox,34,bushes
+fox,34,prey
+fox,34,mammal
+fox,34,a den
+fox,34,"a long, thick tail"
+fox,34,brown or gray fur
+fox,34,vertebrate
+fox,34,black markings around the eyes
+girl,35,"a long, slender body"
+girl,35,a phone
+girl,35,lipstick
+girl,35,a compact
+girl,35,wears clothes
+girl,35,a dress
+girl,35,long hair
+girl,35,a deep voice
+girl,35,earrings
+girl,35,a purse
+girl,35,a male human child
+girl,35,human
+girl,35,shoes
+girl,35,person
+girl,35,wears makeup
+girl,35,a feminine face
+girl,35,male
+girl,35,a necklace
+girl,35,a ring
+girl,35,a hair brush
+hamster,36,animal
+hamster,36,tiny feet
+hamster,36,person
+hamster,36,furry coat
+hamster,36,a toy
+hamster,36,"a small, plump body"
+hamster,36,wheels
+hamster,36,a food dish
+hamster,36,mammal
+hamster,36,short legs
+hamster,36,a round shape
+hamster,36,a cage
+hamster,36,"a long, thick tail"
+hamster,36,large ears
+hamster,36,"a small, rodent-like body"
+house,37,siding or brick exterior
+house,37,lots of windows
+house,37,"a large, rectangular shape"
+house,37,building
+house,37,a chimney
+house,37,a garage
+house,37,a wall
+house,37,structure
+house,37,two doors
+house,37,a pitched roof
+house,37,a door
+house,37,a driveway
+house,37,a lawn
+house,37,object
+kangaroo,38,a safari
+kangaroo,38,animal
+kangaroo,38,"a large, muscular body"
+kangaroo,38,a pasture
+kangaroo,38,a zoo
+kangaroo,38,a pouch on the female's belly
+kangaroo,38,"a big, powerful jaw"
+kangaroo,38,"long, powerful hind legs"
+kangaroo,38,marsupial
+kangaroo,38,a joey
+kangaroo,38,a desert
+kangaroo,38,Australia
+kangaroo,38,a nature reserve
+kangaroo,38,mammal
+kangaroo,38,brown or gray fur
+kangaroo,38,"a long, thick tail"
+kangaroo,38,an Outback
+kangaroo,38,short legs
+keyboard,38,lots of small keys
+keyboard,38,instrument
+keyboard,38,a smooth surface
+keyboard,38,a desk
+keyboard,38,device
+keyboard,38,a computer screen
+keyboard,38,labels on the keys
+keyboard,38,person
+keyboard,38,"a large, rectangular shape"
+keyboard,38,a computer
+keyboard,38,a cord
+keyboard,38,a set of function keys
+keyboard,38,a QWERTY layout
+keyboard,38,object
+lamp,40,shade from the trees
+lamp,40,a sturdy base
+lamp,40,a switch
+lamp,40,a living room
+lamp,40,a cord
+lamp,40,a light
+lamp,40,a bulb at the base
+lamp,40,a socket
+lamp,40,object
+lawn mower,41,blades for cutting grass
+lawn mower,41,a handle for steering
+lawn mower,41,a motor
+lawn mower,41,person
+lawn mower,41,"a large, rectangular shape"
+lawn mower,41,a blade or blades
+lawn mower,41,a rake
+lawn mower,41,a lawn
+lawn mower,41,garden equipment
+lawn mower,41,machine
+lawn mower,41,wheels
+lawn mower,41,a shovel
+lawn mower,41,a sprinkler
+lawn mower,41,a garden hose
+leopard,42,animal
+leopard,42,"a large, muscular body"
+leopard,42,good night vision
+leopard,42,prey
+leopard,42,sharp claws
+leopard,42,a jungle
+leopard,42,carnivore
+leopard,42,Africa
+leopard,42,a large number of trees
+leopard,42,"a small, pointed muzzle"
+leopard,42,a river
+leopard,42,a rock
+leopard,42,mammal
+leopard,42,"a long, thick tail"
+leopard,42,vertebrate
+leopard,42,a lawn
+leopard,42,"a large, round head"
+leopard,42,a predator
+leopard,42,"a large, spotted body"
+lion,43,a cub
+lion,43,"a large, muscular body"
+lion,43,Africa
+lion,43,animal
+lion,43,a roar
+lion,43,a long mane around the head
+lion,43,a pride
+lion,43,"a large, round head"
+lion,43,"long, powerful hind legs"
+lion,43,black spots on the coat
+lion,43,the Serengeti
+lion,43,a tawny or yellowish color
+lion,43,mammal
+lion,43,"a long, thick tail"
+lion,43,vertebrate
+lion,43,sharp claws
+lizard,44,can change color
+lizard,44,a reptilian appearance
+lizard,44,scales on the skin
+lizard,44,animal
+lizard,44,"a tall, slender shape"
+lizard,44,many legs
+lizard,44,amphibian
+lizard,44,a rock
+lizard,44,a bush
+lizard,44,a desert
+lizard,44,"a long, thick tail"
+lizard,44,sand
+lizard,44,a cricket
+lizard,44,vertebrate
+lobster,45,butter
+lobster,45,a napkin
+lobster,45,animal
+lobster,45,arthropod
+lobster,45,a forked tail
+lobster,45,antennae
+lobster,45,a bib
+lobster,45,a knife
+lobster,45,a red or orange color
+lobster,45,a stove
+lobster,45,lemon
+lobster,45,a pot
+lobster,45,"a hard, crustacean body"
+lobster,45,person
+lobster,45,many legs
+lobster,45,water
+lobster,45,"a long, thick tail"
+lobster,45,invertebrate
+lobster,45,two large claws
+lobster,45,a lobster trap
+lobster,45,a hard exoskeleton
+man,46,a deep voice
+man,46,facial hair
+man,46,"a large, muscular body"
+man,46,two arms and two legs
+man,46,a phone
+man,46,male
+man,46,visibly male genitalia
+man,46,broad shoulders
+man,46,a tall stature
+man,46,person
+man,46,a torso
+man,46,a career
+man,46,a male human child
+man,46,"a tall, upright posture"
+man,46,a family
+man,46,human
+man,46,a vehicle
+maple tree,47,plant
+maple tree,47,three-lobed leaves
+maple tree,47,a bucket
+maple tree,47,a sidewalk
+maple tree,47,winged seeds
+maple tree,47,person
+maple tree,47,organism
+maple tree,47,leaves
+maple tree,47,a drill
+maple tree,47,a branch
+maple tree,47,a spile
+maple tree,47,"a long, slender trunk"
+maple tree,47,a tap
+maple tree,47,"smooth, green bark"
+maple tree,47,a crown of leaves
+maple tree,47,a lawn
+maple tree,47,roots
+motorcycle,48,exhaust pipes
+motorcycle,48,a rider
+motorcycle,48,a vehicle
+motorcycle,48,a bus lane
+motorcycle,48,mode of transportation
+motorcycle,48,a motor
+motorcycle,48,person
+motorcycle,48,"a large, powerful engine"
+motorcycle,48,a driver's license
+motorcycle,48,a gas tank
+motorcycle,48,a motorcycle license
+motorcycle,48,wheels
+motorcycle,48,machine
+motorcycle,48,insurance
+motorcycle,48,registration
+motorcycle,48,a handlebar
+motorcycle,48,a helmet
+motorcycle,48,object
+mountain,49,a trail
+mountain,49,"a rough, craggy surface"
+mountain,49,natural feature
+mountain,49,a helmet
+mountain,49,a large number of trees
+mountain,49,landform
+mountain,49,a sturdy base
+mountain,49,a tall stature
+mountain,49,landmass
+mountain,49,a backpack
+mountain,49,a pointed or jagged peak
+mountain,49,geographic feature
+mountain,49,"a large, rocky mass"
+mountain,49,dirt
+mountain,49,a rock
+mountain,49,a steep slope
+mountain,49,snow-capped peaks
+mountain,49,a lawn
+mountain,49,terrain
+mountain,49,a mountain bike
+mouse,50,a desk
+mouse,50,a mouse pad
+mouse,50,animal
+mouse,50,"a small, pointed nose"
+mouse,50,a computer screen
+mouse,50,a computer
+mouse,50,person
+mouse,50,a pointed snout
+mouse,50,a cord
+mouse,50,"a small, furry body"
+mouse,50,mammal
+mouse,50,small eyes and ears
+mouse,50,"a long, thick tail"
+mouse,50,large ears
+mouse,50,"a small, rodent-like body"
+mushroom,51,plant
+mushroom,51,fungus
+mushroom,51,a smooth surface
+mushroom,51,a large number of trees
+mushroom,51,gills on the underside
+mushroom,51,logs
+mushroom,51,a long stem
+mushroom,51,organism
+mushroom,51,dirt
+mushroom,51,leaves
+mushroom,51,soil
+mushroom,51,a light color
+mushroom,51,a white or brown color
+mushroom,51,a round shape
+mushroom,51,a lawn
+oak tree,52,plant
+oak tree,52,"a trunk with thick, rough bark"
+oak tree,52,a nest
+oak tree,52,organism
+oak tree,52,leaves
+oak tree,52,a tree stand
+oak tree,52,acorns
+oak tree,52,a branch
+oak tree,52,green leaves
+oak tree,52,"a long, slender trunk"
+oak tree,52,acorns on the ground beneath
+oak tree,52,birds
+orange,53,plant
+orange,53,a fridge
+orange,53,a smooth surface
+orange,53,fruit
+orange,53,a knife
+orange,53,a forked tail
+orange,53,person
+orange,53,a spoon
+orange,53,Food
+orange,53,a kitchen
+orange,53,a juicy interior
+orange,53,a fruit bowl
+orange,53,a bitter taste
+orange,53,a round shape
+orange,53,a grocery store
+orange,53,a peeler
+orchid,54,a pot
+orchid,54,plant
+orchid,54,a greenhouse
+orchid,54,a stand
+orchid,54,a garden
+orchid,54,a window
+orchid,54,a long stem
+orchid,54,flower
+orchid,54,"a small, delicate flower"
+orchid,54,organism
+orchid,54,person
+orchid,54,leaves
+orchid,54,a light color
+orchid,54,a sweet fragrance
+orchid,54,a watering can
+otter,55,"a long, slender body"
+otter,55,animal
+otter,55,aquatic animal
+otter,55,logs
+otter,55,a pond
+otter,55,a river
+otter,55,person
+otter,55,a rock
+otter,55,water
+otter,55,a stream
+otter,55,"a long, thick tail"
+otter,55,vertebrate
+otter,55,a dam
+otter,55,"a long, tapered tail"
+otter,55,webbed feet
+otter,55,mammal
+otter,55,brown or gray fur
+otter,55,large ears
+otter,55,short legs
+palm tree,56,a tropical appearance
+palm tree,56,plant
+palm tree,56,a beach
+palm tree,56,a small leaf at the top
+palm tree,56,organism
+palm tree,56,person
+palm tree,56,a sunset
+palm tree,56,green leaves
+palm tree,56,"a long, slender trunk"
+palm tree,56,"smooth, green bark"
+palm tree,56,sand
+palm tree,56,a crown of leaves
+palm tree,56,no branches
+pear,57,plant
+pear,57,a stem protruding from the top
+pear,57,a long stem
+pear,57,"smooth, green skin"
+pear,57,"a small, pointed top"
+pear,57,a long neck
+pear,57,a bulbous shape
+pear,57,seeds in the center
+pear,57,a knife
+pear,57,leaves
+pear,57,"a sweet, juicy flesh"
+pear,57,flower
+pear,57,organism
+pear,57,person
+pear,57,a basket
+pear,57,a teardrop-shaped body
+pear,57,"a large, rounded bottom"
+pear,57,fruit
+pear,57,a branch
+pickup truck,58,"a large, muscular body"
+pickup truck,58,a garage
+pickup truck,58,object
+pickup truck,58,a parking lot
+pickup truck,58,a load of lumber
+pickup truck,58,wheels
+pickup truck,58,two doors
+pickup truck,58,a tow rope
+pickup truck,58,a driveway
+pickup truck,58,person
+pickup truck,58,dirt
+pickup truck,58,a cab for the driver
+pickup truck,58,a tarp
+pickup truck,58,a load of hay
+pickup truck,58,an open bed in the back
+pickup truck,58,a trailer
+pickup truck,58,a hitch for pulling trailers
+pickup truck,58,"a large, rectangular shape"
+pickup truck,58,a long hood
+pickup truck,58,a vehicle
+pine tree,59,plant
+pine tree,59,whiskers
+pine tree,59,cones
+pine tree,59,furry coat
+pine tree,59,cone-shaped fruit
+pine tree,59,"a small, agile body"
+pine tree,59,sharp claws
+pine tree,59,a tree stand
+pine tree,59,a wreath
+pine tree,59,a garland
+pine tree,59,evergreen needles
+pine tree,59,a saw
+pine tree,59,organism
+pine tree,59,person
+pine tree,59,"a long, slender trunk"
+pine tree,59,needles
+pine tree,59,"a tall, slender shape"
+pine tree,59,brown or reddish-brown bark
+pine tree,59,a branch
+pine tree,59,wooden bark
+pine tree,59,a Christmas tree
+pine tree,59,large ears
+plain,60,"a large, rocky mass"
+plain,60,a deep blue or green color
+plain,60,a silo
+plain,60,a large number of trees
+plain,60,a fence
+plain,60,no pattern or design
+plain,60,a field
+plain,60,a lawn
+plain,60,unadorned
+plain,60,"a small, pointed top"
+plain,60,"a rough, craggy surface"
+plain,60,a uniform color
+plain,60,simple
+plain,60,a barn
+plain,60,a farmer
+plain,60,"simple, unadorned design"
+plain,60,"a large, flat surface"
+plain,60,ordinary
+plate,61,container
+plate,61,a napkin
+plate,61,a smooth surface
+plate,61,a raised edge
+plate,61,a knife
+plate,61,a forked tail
+plate,61,a rim around the top
+plate,61,person
+plate,61,a spoon
+plate,61,a sturdy build
+plate,61,"a large, rectangular shape"
+plate,61,Food
+plate,61,a food dish
+plate,61,flatware
+plate,61,object
+poppy,62,a petal
+poppy,62,plant
+poppy,62,a black center
+poppy,62,a small leaf at the top
+poppy,62,a long stem
+poppy,62,flower
+poppy,62,organism
+poppy,62,person
+poppy,62,a red or orange color
+poppy,62,a field
+poppy,62,a round shape
+poppy,62,"a thin, papery texture"
+porcupine,63,animal
+porcupine,63,a mate
+porcupine,63,"a small, rodent-like body"
+porcupine,63,a large number of trees
+porcupine,63,leaves
+porcupine,63,a small head
+porcupine,63,a spiky coat
+porcupine,63,a quill
+porcupine,63,small eyes and ears
+porcupine,63,a den
+porcupine,63,a burrow
+porcupine,63,bushes
+porcupine,63,mammal
+porcupine,63,"a long, thick tail"
+porcupine,63,a coat of sharp quills
+porcupine,63,vertebrate
+porcupine,63,black and white coloration
+porcupine,63,a round shape
+porcupine,63,short legs
+possum,64,animal
+possum,64,a large number of trees
+possum,64,a den
+possum,64,baby possums
+possum,64,a pointed snout
+possum,64,leaves
+possum,64,brown or gray fur
+possum,64,marsupial
+possum,64,"a small, furry body"
+possum,64,scratches
+possum,64,mammal
+possum,64,"large, black eyes"
+possum,64,"two small, beady eyes"
+possum,64,"a long, thick tail"
+possum,64,a parent
+possum,64,sharp claws
+rabbit,65,a tail
+rabbit,65,animal
+rabbit,65,a hutch
+rabbit,65,person
+rabbit,65,lagomorph
+rabbit,65,"a small, furry body"
+rabbit,65,a lettuce
+rabbit,65,a twitchy nose
+rabbit,65,mammal
+rabbit,65,a load of hay
+rabbit,65,vertebrate
+rabbit,65,large ears
+rabbit,65,vegetable
+rabbit,65,short legs
+raccoon,66,a black mask around the eyes
+raccoon,66,5-7 black rings on the tail
+raccoon,66,"a small, pointed muzzle"
+raccoon,66,a thief
+raccoon,66,animal
+raccoon,66,a large number of trees
+raccoon,66,a trash can
+raccoon,66,a stocky body
+raccoon,66,Food
+raccoon,66,a bandit
+raccoon,66,her young
+raccoon,66,garbage
+raccoon,66,a den
+raccoon,66,mammal
+raccoon,66,vertebrate
+ray,67,animal
+ray,67,"a large, muscular body"
+ray,67,suntan lotion
+ray,67,sunglasses
+ray,67,various color patterns
+ray,67,a hat
+ray,67,sunscreen
+ray,67,large fins
+ray,67,a surfboard
+ray,67,water
+ray,67,a wet suit
+ray,67,"a long, thick tail"
+ray,67,sand
+ray,67,vertebrate
+ray,67,a body of water
+ray,67,a beach
+ray,67,a flattened body
+ray,67,"two small, beady eyes"
+ray,67,a towel
+road,68,pedestrians
+road,68,a path
+road,68,outdoor
+road,68,a stop sign
+road,68,a sidewalk
+road,68,person
+road,68,a pothole
+road,68,way
+road,68,a curb
+road,68,made of asphalt or concrete
+road,68,"a long, straight path"
+road,68,markings for lanes
+road,68,location
+road,68,a street light
+road,68,a crosswalk
+road,68,"a large, flat surface"
+road,68,a vehicle
+rocket,69,a control room
+rocket,69,a countdown
+rocket,69,pointed at one end
+rocket,69,a space shuttle
+rocket,69,a helmet
+rocket,69,object
+rocket,69,tool
+rocket,69,a red or orange color
+rocket,69,propulsion at the back
+rocket,69,a rocket engine
+rocket,69,fins at the other end
+rocket,69,a launchpad
+rocket,69,a wet suit
+rocket,69,a light color
+rocket,69,"a small, pointed nose"
+rocket,69,"a long, cylindrical shape"
+rocket,69,a crew of astronauts
+rocket,69,a spaceship
+rocket,69,a launch
+rose,70,a petal
+rose,70,plant
+rose,70,a bouquet
+rose,70,"a large, colorful flower"
+rose,70,a garden
+rose,70,a small leaf at the top
+rose,70,a long stem
+rose,70,a vase
+rose,70,flower
+rose,70,a sweet fragrance
+rose,70,"a fresh, earthy smell"
+rose,70,a thorn
+rose,70,object
+sea,71,a deep blue or green color
+sea,71,seagulls
+sea,71,waves
+sea,71,a body of water
+sea,71,a beach
+sea,71,saltwater
+sea,71,a sunset
+sea,71,water
+sea,71,a boat
+sea,71,a dock
+sea,71,natural feature
+sea,71,a horizon
+seal,72,seagulls
+seal,72,animal
+seal,72,a beach
+seal,72,aquatic animal
+seal,72,webbed feet
+seal,72,"a black, fur-covered nose"
+seal,72,person
+seal,72,a rock
+seal,72,a small head
+seal,72,mammal
+seal,72,"large, black eyes"
+seal,72,"a long, thick tail"
+seal,72,a streamlined body
+seal,72,vertebrate
+seal,72,flippers on the sides
+seal,72,a soccer ball
+shark,73,animal
+shark,73,"large, sharp teeth"
+shark,73,"a large, gray body"
+shark,73,a swimmer
+shark,73,a lifeguard
+shark,73,"a large, predatory fish"
+shark,73,a boat
+shark,73,small eyes and ears
+shark,73,gray or blue color
+shark,73,a surfboard
+shark,73,a shark fin
+shark,73,water
+shark,73,a wet suit
+shark,73,"a long, thick tail"
+shark,73,vertebrate
+shark,73,a beach
+shark,73,"a large, triangular fin"
+shark,73,a dorsal fin
+shark,73,a streamlined body
+shark,73,a cage
+shrew,74,plant
+shrew,74,animal
+shrew,74,a hole in the ground
+shrew,74,small eyes and ears
+shrew,74,a pointed snout
+shrew,74,"short, velvety fur"
+shrew,74,a rock
+shrew,74,a cat
+shrew,74,a predator
+shrew,74,a hawk
+shrew,74,vertebrate
+shrew,74,mammal
+shrew,74,a insect
+shrew,74,a tunnel
+shrew,74,"a long, thick tail"
+shrew,74,"a small, rodent-like body"
+skunk,75,animal
+skunk,75,a hole in the ground
+skunk,75,black and white coloration
+skunk,75,a stripe
+skunk,75,a small head
+skunk,75,a striped pattern on the back
+skunk,75,a black and white color scheme
+skunk,75,mammal
+skunk,75,"large, black eyes"
+skunk,75,a spray bottle
+skunk,75,"a long, thick tail"
+skunk,75,"a fresh, earthy smell"
+skunk,75,vertebrate
+skyscraper,76,pedestrians
+skyscraper,76,"smooth, straight lines"
+skyscraper,76,lots of windows
+skyscraper,76,a sidewalk
+skyscraper,76,a city
+skyscraper,76,"a large, rectangular shape"
+skyscraper,76,building
+skyscraper,76,a street
+skyscraper,76,people
+skyscraper,76,passenger cars
+skyscraper,76,"a small, pointed top"
+skyscraper,76,often has a point at the top
+skyscraper,76,structure
+skyscraper,76,a uniform color
+skyscraper,76,made of metal or glass
+skyscraper,76,object
+snail,77,plant
+snail,77,animal
+snail,77,"a large, spiral shell"
+snail,77,slow movement
+snail,77,mollusc
+snail,77,slime
+snail,77,a small leaf at the top
+snail,77,"a small, hard shell"
+snail,77,a slime trail
+snail,77,dirt
+snail,77,a rock
+snail,77,water
+snail,77,"a soft, slimy body"
+snail,77,"a long, thick tail"
+snail,77,two feelers
+snail,77,invertebrate
+snail,77,a garden
+snail,77,a shell
+snail,77,a round shape
+snake,78,animal
+snake,78,a large number of trees
+snake,78,large scales
+snake,78,"a tall, slender shape"
+snake,78,a snake charmer
+snake,78,leaves
+snake,78,a branch
+snake,78,a mongoose
+snake,78,a basket
+snake,78,a small head
+snake,78,vertebrate
+snake,78,a cobra
+snake,78,no legs
+snake,78,a python
+snake,78,a forked tongue
+spider,79,two feelers
+spider,79,a shadow
+spider,79,eight eyes
+spider,79,animal
+spider,79,"a long, thin abdomen"
+spider,79,a small leaf at the top
+spider,79,"two large, compound eyes"
+spider,79,a fly
+spider,79,person
+spider,79,a web
+spider,79,a bug
+spider,79,fang-like mouthparts
+spider,79,many legs
+spider,79,a branch
+spider,79,a small head
+spider,79,a round shape
+spider,79,a insect
+spider,79,hairy or spiny legs
+squirrel,80,a tail
+squirrel,80,animal
+squirrel,80,a small leaf at the top
+squirrel,80,sharp claws
+squirrel,80,person
+squirrel,80,able to climb trees
+squirrel,80,acorns
+squirrel,80,a branch
+squirrel,80,"a small, furry body"
+squirrel,80,a bird feeder
+squirrel,80,front paws that resemble hands
+squirrel,80,mammal
+squirrel,80,brown or gray fur
+squirrel,80,vertebrate
+squirrel,80,large ears
+squirrel,80,nuts
+squirrel,80,"a small, rodent-like body"
+streetcar,81,pedestrians
+streetcar,81,"a long, slender body"
+streetcar,81,rail vehicle
+streetcar,81,mode of transportation
+streetcar,81,"a tall, slender shape"
+streetcar,81,a city
+streetcar,81,a track
+streetcar,81,a street
+streetcar,81,tracks for wheels
+streetcar,81,passenger cars
+streetcar,81,a platform at one end
+streetcar,81,a stop sign
+streetcar,81,tram
+streetcar,81,a street light
+streetcar,81,usually electric power
+streetcar,81,object
+sunflower,82,a pot
+sunflower,82,plant
+sunflower,82,"a large, colorful flower"
+sunflower,82,a garden
+sunflower,82,a black center
+sunflower,82,a long stem
+sunflower,82,flower
+sunflower,82,"a large, round head"
+sunflower,82,organism
+sunflower,82,a field
+sunflower,82,soil
+sunflower,82,green leaves
+sunflower,82,a ladybug
+sunflower,82,a large yellow center
+sunflower,82,"a green, leafy base"
+sunflower,82,a watering can
+sunflower,82,"a red, green, or yellow color"
+sweet pepper,83,a sun
+sweet pepper,83,plant
+sweet pepper,83,a fridge
+sweet pepper,83,a garden
+sweet pepper,83,a grocery store
+sweet pepper,83,"a tall, slender shape"
+sweet pepper,83,a watering can
+sweet pepper,83,person
+sweet pepper,83,a red or orange color
+sweet pepper,83,a knife
+sweet pepper,83,a cutting board
+sweet pepper,83,soil
+sweet pepper,83,a mild flavor
+sweet pepper,83,"smooth, green skin"
+sweet pepper,83,pointed at one end
+sweet pepper,83,"a thin, papery texture"
+sweet pepper,83,vegetable
+table,84,a place mat
+table,84,a knife
+table,84,a forked tail
+table,84,person
+table,84,a spoon
+table,84,legs or support underneath
+table,84,a sturdy build
+table,84,a glass
+table,84,furniture
+table,84,"a large, flat surface"
+table,84,object
+tank,85,a soldier
+tank,85,container
+tank,85,a vehicle
+tank,85,usually has a lid
+tank,85,a country
+tank,85,a gun
+tank,85,may have an air pump or filter
+tank,85,a flag
+tank,85,"a large, rectangular shape"
+tank,85,used to hold liquids or gases
+tank,85,machine
+tank,85,a uniform color
+tank,85,a helmet
+tank,85,made of metal or glass
+tank,85,object
+telephone,86,a pen
+telephone,86,buttons
+telephone,86,a phone
+telephone,86,a sturdy base
+telephone,86,device
+telephone,86,a paper
+telephone,86,a number pad
+telephone,86,tool
+telephone,86,person
+telephone,86,a keypad on one side
+telephone,86,communication device
+telephone,86,electronic device
+telephone,86,a cord
+telephone,86,a round shape
+telephone,86,a phone book
+telephone,86,a base unit with a speaker
+telephone,86,object
+television,87,a stand
+television,87,device
+television,87,a computer screen
+television,87,a blanket
+television,87,an electrical outlet
+television,87,a pillow
+television,87,a coffee table
+television,87,a living room
+television,87,electronic device
+television,87,machine
+television,87,controls for power and volume
+television,87,speakers
+television,87,cables
+television,87,appliance
+television,87,a remote control
+television,87,object
+tiger,88,carnivore
+tiger,88,"a large, muscular body"
+tiger,88,animal
+tiger,88,a striped coat
+tiger,88,"a large, round head"
+tiger,88,a zoo
+tiger,88,Food
+tiger,88,striped fur
+tiger,88,a toy
+tiger,88,water
+tiger,88,mammal
+tiger,88,a keeper
+tiger,88,"a long, thick tail"
+tiger,88,a cage
+tiger,88,vertebrate
+tiger,88,large ears
+tiger,88,sharp claws
+tractor,89,"a wide, flat front"
+tractor,89,"a large, muscular body"
+tractor,89,a steering wheel
+tractor,89,a metal or plastic body
+tractor,89,a plow
+tractor,89,a harrow
+tractor,89,object
+tractor,89,exhaust pipes
+tractor,89,a cultivator
+tractor,89,wheels
+tractor,89,a cab for the driver
+tractor,89,a large size
+tractor,89,a farmer
+tractor,89,a trailer
+tractor,89,a hitch for pulling trailers
+tractor,89,a field
+tractor,89,machine
+tractor,89,chickens
+tractor,89,a barn
+train,90,a conductor
+train,90,a vehicle
+train,90,mode of transportation
+train,90,a locomotive
+train,90,lots of smoke
+train,90,a track
+train,90,a ticket
+train,90,"a large, powerful engine"
+train,90,passenger cars
+train,90,a loud horn
+train,90,wheels
+train,90,long and slender
+train,90,a schedule
+train,90,object
+trout,91,"a long, slender body"
+trout,91,animal
+trout,91,a river
+trout,91,large fins
+trout,91,bait
+trout,91,large scales
+trout,91,"a tall, slender shape"
+trout,91,a forked tail
+trout,91,a hook
+trout,91,a pond
+trout,91,a rod
+trout,91,a net
+trout,91,"large, black eyes"
+trout,91,vertebrate
+trout,91,a reel
+tulip,92,a pot
+tulip,92,plant
+tulip,92,a generally tulip-shaped form
+tulip,92,"a large, colorful flower"
+tulip,92,a garden
+tulip,92,a long stem
+tulip,92,flower
+tulip,92,person
+tulip,92,dirt
+tulip,92,a green thumb
+tulip,92,leaves
+tulip,92,a bulb at the base
+tulip,92,"a green, leafy base"
+tulip,92,a sunny windowsill
+tulip,92,a watering can
+turtle,93,a long neck
+turtle,93,animal
+turtle,93,a beach
+turtle,93,logs
+turtle,93,many legs
+turtle,93,a pond
+turtle,93,a rock
+turtle,93,water
+turtle,93,a small head
+turtle,93,"a small, hard shell"
+turtle,93,a shell
+turtle,93,slow movement
+turtle,93,a green or brown shell
+turtle,93,"a long, thick tail"
+turtle,93,vertebrate
+turtle,93,a lawn
+turtle,93,short legs
+wardrobe,94,hangers
+wardrobe,94,a pants
+wardrobe,94,shoes
+wardrobe,94,"a large, rectangular shape"
+wardrobe,94,a dress
+wardrobe,94,a bed frame
+wardrobe,94,a shirt
+wardrobe,94,storage
+wardrobe,94,furniture
+wardrobe,94,a light color
+wardrobe,94,a mirror
+wardrobe,94,a door
+wardrobe,94,object
+whale,95,animal
+whale,95,"a large, muscular body"
+whale,95,a harpoon
+whale,95,a pointed snout
+whale,95,seagulls
+whale,95,"a large, ocean-dwelling mammal"
+whale,95,a boat
+whale,95,a captain
+whale,95,flippers on the sides
+whale,95,gray or blue color
+whale,95,a net
+whale,95,people
+whale,95,a whalebone
+whale,95,"a long, thick tail"
+whale,95,vertebrate
+whale,95,a crew of astronauts
+whale,95,"a tall, slender shape"
+whale,95,a blowhole
+whale,95,mammal
+willow tree,96,plant
+willow tree,96,a river
+willow tree,96,"lush, green leaves"
+willow tree,96,organism
+willow tree,96,a pond
+willow tree,96,leaves
+willow tree,96,a meadow
+willow tree,96,a field
+willow tree,96,greenish-brown color
+willow tree,96,a weeping or cascading form
+willow tree,96,a stream
+willow tree,96,"a long, slender trunk"
+willow tree,96,"long, drooping branches"
+wolf,97,pups
+wolf,97,facial hair
+wolf,97,animal
+wolf,97,"a large, muscular body"
+wolf,97,a den
+wolf,97,a large number of trees
+wolf,97,a pointed snout
+wolf,97,a mate
+wolf,97,bushes
+wolf,97,mammal
+wolf,97,prey
+wolf,97,a pack
+wolf,97,"a long, thick tail"
+wolf,97,brown or gray fur
+wolf,97,vertebrate
+wolf,97,large ears
+woman,98,a softer voice than a man
+woman,98,a phone
+woman,98,long hair
+woman,98,a generally curvy body shape
+woman,98,breasts
+woman,98,a tall stature
+woman,98,a purse
+woman,98,a male human child
+woman,98,a muscular or stocky build
+woman,98,a family
+woman,98,human
+woman,98,longer hair than a man
+woman,98,person
+woman,98,love
+woman,98,adult
+woman,98,a feminine face
+woman,98,male
+woman,98,"a tall, slender shape"
+woman,98,a career
+woman,98,narrow hips
+woman,98,responsibilities
+woman,98,a vehicle
+worm,99,plant
+worm,99,a compost bin
+worm,99,animal
+worm,99,invertebrate
+worm,99,a garden
+worm,99,often found in the dirt
+worm,99,"a tall, slender shape"
+worm,99,a forked tail
+worm,99,dirt
+worm,99,a worm bin
+worm,99,soil
+worm,99,moves by wriggling
+worm,99,no legs
+worm,99,a spade

@@ -1,0 +1,9 @@
+torch
+mmcv==1.5.2
+git+https://github.com/openai/CLIP.git
+pytorch-lightning
+scikit-learn
+yapf==0.40.1
+wandb
+matplotlib
+apricot-select

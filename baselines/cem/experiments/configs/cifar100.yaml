@@ -1,0 +1,63 @@
+trials: 3
+results_dir: ./results/cifar100/
+
+shared_params:
+  # Dataset Configuration
+  dataset_config:
+    dataset: "cifar100"
+    num_workers: 8
+    batch_size: 256
+
+    # DATASET VARIABLES
+    root_dir: ./../DATA/cifar100/
+    sampling_percent: 1
+    test_subsampling: 1
+    weight_loss: False
+
+  skip_repr_evaluation: True
+
+  max_epochs: 100
+  top_k_accuracy: null
+  save_model: True
+  patience: 15
+  emb_size: 16
+  extra_dims: 0
+  concept_loss_weight: 5
+  learning_rate: 0.01
+  weight_decay: 0.000004
+  weight_loss: True
+  c_extractor_arch: resnet18
+  optimizer: sgd
+  bool: False
+  early_stopping_monitor: val_loss
+  early_stopping_mode: min
+  early_stopping_delta: 0.0
+  momentum: 0.9
+  sigmoidal_prob: False
+  training_intervention_prob: 0.25
+
+runs:
+  - architecture: 'ConceptEmbeddingModel'
+    run_name: "CEM"
+    sigmoidal_prob: True
+    training_intervention_prob: 0.25
+    embedding_activation: "leakyrelu"
+  
+  - architecture: ProbabilisticConceptBottleneckModel
+    run_name: ProbCBM
+    concept_loss_weight: 1
+    n_samples_inference: 50
+    use_neg_concept: true
+    pred_class: true
+    init_negative_scale: 5
+    init_shift: 5
+    pretrained: true
+    hidden_dim: 16
+    class_hidden_dim: 64
+    intervention_prob: 0.5
+    gradient_clip_val: 2
+    max_concept_epochs: 50
+    warmup_epochs: 5
+    max_task_epochs: 50
+    vib_beta: 0.00005
+    lr_ratio: 10

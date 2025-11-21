@@ -1,0 +1,8 @@
+*.jpg
+*.pth
+*.ckpt
+*.npy
+__pycache__
+wandb/
+lightning_logs/
+.DS_Store

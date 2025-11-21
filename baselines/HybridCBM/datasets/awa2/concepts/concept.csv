@@ -1,0 +1,1563 @@
+class,label,concept
+antelope,0,furry
+antelope,0,toughskin
+antelope,0,big
+antelope,0,lean
+antelope,0,hooves
+antelope,0,longleg
+antelope,0,tail
+antelope,0,chewteeth
+antelope,0,horns
+antelope,0,walks
+antelope,0,fast
+antelope,0,strong
+antelope,0,muscle
+antelope,0,quadrapedal
+antelope,0,active
+antelope,0,agility
+antelope,0,vegetation
+antelope,0,forager
+antelope,0,grazer
+antelope,0,newworld
+antelope,0,oldworld
+antelope,0,plains
+antelope,0,fields
+antelope,0,mountains
+antelope,0,ground
+antelope,0,timid
+antelope,0,group
+grizzly bear,1,black
+grizzly bear,1,brown
+grizzly bear,1,furry
+grizzly bear,1,toughskin
+grizzly bear,1,big
+grizzly bear,1,bulbous
+grizzly bear,1,paws
+grizzly bear,1,chewteeth
+grizzly bear,1,meatteeth
+grizzly bear,1,claws
+grizzly bear,1,walks
+grizzly bear,1,fast
+grizzly bear,1,slow
+grizzly bear,1,strong
+grizzly bear,1,muscle
+grizzly bear,1,bipedal
+grizzly bear,1,quadrapedal
+grizzly bear,1,active
+grizzly bear,1,inactive
+grizzly bear,1,nocturnal
+grizzly bear,1,hibernate
+grizzly bear,1,fish
+grizzly bear,1,meat
+grizzly bear,1,forager
+grizzly bear,1,hunter
+grizzly bear,1,stalker
+grizzly bear,1,newworld
+grizzly bear,1,forest
+grizzly bear,1,mountains
+grizzly bear,1,ground
+grizzly bear,1,cave
+grizzly bear,1,fierce
+grizzly bear,1,smart
+grizzly bear,1,solitary
+killer whale,2,black
+killer whale,2,white
+killer whale,2,patches
+killer whale,2,spots
+killer whale,2,hairless
+killer whale,2,toughskin
+killer whale,2,big
+killer whale,2,bulbous
+killer whale,2,lean
+killer whale,2,flippers
+killer whale,2,tail
+killer whale,2,meatteeth
+killer whale,2,strainteeth
+killer whale,2,swims
+killer whale,2,fast
+killer whale,2,strong
+killer whale,2,active
+killer whale,2,agility
+killer whale,2,fish
+killer whale,2,meat
+killer whale,2,plankton
+killer whale,2,hunter
+killer whale,2,arctic
+killer whale,2,coastal
+killer whale,2,ocean
+killer whale,2,water
+killer whale,2,fierce
+killer whale,2,smart
+killer whale,2,group
+beaver,3,brown
+beaver,3,furry
+beaver,3,toughskin
+beaver,3,small
+beaver,3,bulbous
+beaver,3,pads
+beaver,3,paws
+beaver,3,tail
+beaver,3,chewteeth
+beaver,3,buckteeth
+beaver,3,strainteeth
+beaver,3,claws
+beaver,3,swims
+beaver,3,fast
+beaver,3,strong
+beaver,3,muscle
+beaver,3,quadrapedal
+beaver,3,active
+beaver,3,nocturnal
+beaver,3,hibernate
+beaver,3,agility
+beaver,3,fish
+beaver,3,newworld
+beaver,3,coastal
+beaver,3,ground
+beaver,3,water
+beaver,3,timid
+beaver,3,smart
+beaver,3,group
+beaver,3,solitary
+beaver,3,nestspot
+dalmatian,4,black
+dalmatian,4,white
+dalmatian,4,patches
+dalmatian,4,spots
+dalmatian,4,furry
+dalmatian,4,hairless
+dalmatian,4,big
+dalmatian,4,lean
+dalmatian,4,paws
+dalmatian,4,longleg
+dalmatian,4,tail
+dalmatian,4,chewteeth
+dalmatian,4,meatteeth
+dalmatian,4,walks
+dalmatian,4,fast
+dalmatian,4,strong
+dalmatian,4,muscle
+dalmatian,4,quadrapedal
+dalmatian,4,active
+dalmatian,4,agility
+dalmatian,4,meat
+dalmatian,4,newworld
+dalmatian,4,oldworld
+dalmatian,4,ground
+dalmatian,4,timid
+dalmatian,4,smart
+dalmatian,4,group
+dalmatian,4,solitary
+dalmatian,4,domestic
+persian cat,5,white
+persian cat,5,blue
+persian cat,5,gray
+persian cat,5,furry
+persian cat,5,small
+persian cat,5,bulbous
+persian cat,5,pads
+persian cat,5,paws
+persian cat,5,tail
+persian cat,5,chewteeth
+persian cat,5,meatteeth
+persian cat,5,claws
+persian cat,5,walks
+persian cat,5,fast
+persian cat,5,slow
+persian cat,5,weak
+persian cat,5,quadrapedal
+persian cat,5,inactive
+persian cat,5,agility
+persian cat,5,fish
+persian cat,5,meat
+persian cat,5,newworld
+persian cat,5,oldworld
+persian cat,5,ground
+persian cat,5,timid
+persian cat,5,smart
+persian cat,5,solitary
+persian cat,5,domestic
+horse,6,black
+horse,6,white
+horse,6,brown
+horse,6,gray
+horse,6,patches
+horse,6,furry
+horse,6,toughskin
+horse,6,big
+horse,6,lean
+horse,6,hooves
+horse,6,longleg
+horse,6,longneck
+horse,6,tail
+horse,6,chewteeth
+horse,6,buckteeth
+horse,6,smelly
+horse,6,walks
+horse,6,fast
+horse,6,strong
+horse,6,muscle
+horse,6,quadrapedal
+horse,6,active
+horse,6,agility
+horse,6,vegetation
+horse,6,grazer
+horse,6,newworld
+horse,6,oldworld
+horse,6,plains
+horse,6,fields
+horse,6,ground
+horse,6,timid
+horse,6,smart
+horse,6,group
+horse,6,domestic
+german shepherd,7,black
+german shepherd,7,brown
+german shepherd,7,gray
+german shepherd,7,patches
+german shepherd,7,furry
+german shepherd,7,big
+german shepherd,7,lean
+german shepherd,7,pads
+german shepherd,7,paws
+german shepherd,7,longleg
+german shepherd,7,tail
+german shepherd,7,chewteeth
+german shepherd,7,meatteeth
+german shepherd,7,claws
+german shepherd,7,smelly
+german shepherd,7,walks
+german shepherd,7,fast
+german shepherd,7,strong
+german shepherd,7,muscle
+german shepherd,7,quadrapedal
+german shepherd,7,active
+german shepherd,7,agility
+german shepherd,7,meat
+german shepherd,7,hunter
+german shepherd,7,stalker
+german shepherd,7,newworld
+german shepherd,7,oldworld
+german shepherd,7,plains
+german shepherd,7,ground
+german shepherd,7,fierce
+german shepherd,7,smart
+german shepherd,7,solitary
+german shepherd,7,domestic
+blue whale,8,blue
+blue whale,8,gray
+blue whale,8,spots
+blue whale,8,hairless
+blue whale,8,toughskin
+blue whale,8,big
+blue whale,8,bulbous
+blue whale,8,flippers
+blue whale,8,tail
+blue whale,8,strainteeth
+blue whale,8,swims
+blue whale,8,fast
+blue whale,8,slow
+blue whale,8,strong
+blue whale,8,muscle
+blue whale,8,inactive
+blue whale,8,fish
+blue whale,8,plankton
+blue whale,8,skimmer
+blue whale,8,newworld
+blue whale,8,oldworld
+blue whale,8,arctic
+blue whale,8,ocean
+blue whale,8,water
+blue whale,8,timid
+blue whale,8,smart
+blue whale,8,group
+blue whale,8,solitary
+siamese cat,9,black
+siamese cat,9,white
+siamese cat,9,brown
+siamese cat,9,gray
+siamese cat,9,patches
+siamese cat,9,furry
+siamese cat,9,small
+siamese cat,9,lean
+siamese cat,9,pads
+siamese cat,9,paws
+siamese cat,9,longleg
+siamese cat,9,tail
+siamese cat,9,chewteeth
+siamese cat,9,meatteeth
+siamese cat,9,claws
+siamese cat,9,walks
+siamese cat,9,fast
+siamese cat,9,weak
+siamese cat,9,muscle
+siamese cat,9,quadrapedal
+siamese cat,9,active
+siamese cat,9,inactive
+siamese cat,9,nocturnal
+siamese cat,9,agility
+siamese cat,9,fish
+siamese cat,9,meat
+siamese cat,9,hunter
+siamese cat,9,stalker
+siamese cat,9,newworld
+siamese cat,9,oldworld
+siamese cat,9,ground
+siamese cat,9,fierce
+siamese cat,9,timid
+siamese cat,9,smart
+siamese cat,9,solitary
+siamese cat,9,domestic
+skunk,10,black
+skunk,10,white
+skunk,10,stripes
+skunk,10,furry
+skunk,10,small
+skunk,10,bulbous
+skunk,10,pads
+skunk,10,paws
+skunk,10,tail
+skunk,10,smelly
+skunk,10,walks
+skunk,10,fast
+skunk,10,slow
+skunk,10,weak
+skunk,10,quadrapedal
+skunk,10,active
+skunk,10,nocturnal
+skunk,10,hibernate
+skunk,10,vegetation
+skunk,10,forager
+skunk,10,newworld
+skunk,10,oldworld
+skunk,10,forest
+skunk,10,fields
+skunk,10,ground
+skunk,10,timid
+skunk,10,solitary
+mole,11,black
+mole,11,brown
+mole,11,gray
+mole,11,furry
+mole,11,small
+mole,11,bulbous
+mole,11,lean
+mole,11,paws
+mole,11,chewteeth
+mole,11,buckteeth
+mole,11,claws
+mole,11,tunnels
+mole,11,walks
+mole,11,fast
+mole,11,slow
+mole,11,weak
+mole,11,quadrapedal
+mole,11,active
+mole,11,nocturnal
+mole,11,hibernate
+mole,11,agility
+mole,11,vegetation
+mole,11,insects
+mole,11,forager
+mole,11,newworld
+mole,11,oldworld
+mole,11,plains
+mole,11,forest
+mole,11,fields
+mole,11,ground
+mole,11,timid
+mole,11,solitary
+mole,11,nestspot
+tiger,12,black
+tiger,12,white
+tiger,12,orange
+tiger,12,stripes
+tiger,12,furry
+tiger,12,big
+tiger,12,lean
+tiger,12,pads
+tiger,12,paws
+tiger,12,tail
+tiger,12,chewteeth
+tiger,12,meatteeth
+tiger,12,buckteeth
+tiger,12,claws
+tiger,12,smelly
+tiger,12,walks
+tiger,12,fast
+tiger,12,strong
+tiger,12,muscle
+tiger,12,quadrapedal
+tiger,12,active
+tiger,12,nocturnal
+tiger,12,agility
+tiger,12,meat
+tiger,12,hunter
+tiger,12,stalker
+tiger,12,oldworld
+tiger,12,bush
+tiger,12,plains
+tiger,12,forest
+tiger,12,jungle
+tiger,12,ground
+tiger,12,fierce
+tiger,12,smart
+tiger,12,group
+tiger,12,solitary
+tiger,12,nestspot
+hippopotamus,13,gray
+hippopotamus,13,hairless
+hippopotamus,13,toughskin
+hippopotamus,13,big
+hippopotamus,13,bulbous
+hippopotamus,13,chewteeth
+hippopotamus,13,strainteeth
+hippopotamus,13,swims
+hippopotamus,13,walks
+hippopotamus,13,slow
+hippopotamus,13,strong
+hippopotamus,13,muscle
+hippopotamus,13,quadrapedal
+hippopotamus,13,inactive
+hippopotamus,13,fish
+hippopotamus,13,vegetation
+hippopotamus,13,oldworld
+hippopotamus,13,jungle
+hippopotamus,13,ground
+hippopotamus,13,water
+hippopotamus,13,timid
+hippopotamus,13,solitary
+leopard,14,black
+leopard,14,brown
+leopard,14,yellow
+leopard,14,patches
+leopard,14,spots
+leopard,14,furry
+leopard,14,big
+leopard,14,lean
+leopard,14,paws
+leopard,14,longleg
+leopard,14,tail
+leopard,14,meatteeth
+leopard,14,claws
+leopard,14,walks
+leopard,14,fast
+leopard,14,strong
+leopard,14,muscle
+leopard,14,quadrapedal
+leopard,14,active
+leopard,14,nocturnal
+leopard,14,agility
+leopard,14,fish
+leopard,14,meat
+leopard,14,forager
+leopard,14,hunter
+leopard,14,stalker
+leopard,14,newworld
+leopard,14,oldworld
+leopard,14,bush
+leopard,14,plains
+leopard,14,jungle
+leopard,14,mountains
+leopard,14,ground
+leopard,14,tree
+leopard,14,fierce
+leopard,14,smart
+leopard,14,solitary
+leopard,14,nestspot
+moose,15,brown
+moose,15,furry
+moose,15,toughskin
+moose,15,big
+moose,15,bulbous
+moose,15,hooves
+moose,15,longleg
+moose,15,longneck
+moose,15,tail
+moose,15,chewteeth
+moose,15,horns
+moose,15,smelly
+moose,15,walks
+moose,15,fast
+moose,15,slow
+moose,15,strong
+moose,15,muscle
+moose,15,quadrapedal
+moose,15,inactive
+moose,15,vegetation
+moose,15,forager
+moose,15,grazer
+moose,15,newworld
+moose,15,oldworld
+moose,15,arctic
+moose,15,plains
+moose,15,forest
+moose,15,fields
+moose,15,mountains
+moose,15,ground
+moose,15,timid
+moose,15,group
+moose,15,solitary
+spider monkey,16,black
+spider monkey,16,brown
+spider monkey,16,gray
+spider monkey,16,furry
+spider monkey,16,small
+spider monkey,16,lean
+spider monkey,16,hands
+spider monkey,16,paws
+spider monkey,16,longleg
+spider monkey,16,tail
+spider monkey,16,chewteeth
+spider monkey,16,walks
+spider monkey,16,fast
+spider monkey,16,strong
+spider monkey,16,muscle
+spider monkey,16,bipedal
+spider monkey,16,quadrapedal
+spider monkey,16,active
+spider monkey,16,agility
+spider monkey,16,vegetation
+spider monkey,16,forager
+spider monkey,16,grazer
+spider monkey,16,newworld
+spider monkey,16,oldworld
+spider monkey,16,forest
+spider monkey,16,jungle
+spider monkey,16,tree
+spider monkey,16,timid
+spider monkey,16,smart
+spider monkey,16,group
+spider monkey,16,nestspot
+humpback whale,17,black
+humpback whale,17,blue
+humpback whale,17,gray
+humpback whale,17,hairless
+humpback whale,17,toughskin
+humpback whale,17,big
+humpback whale,17,bulbous
+humpback whale,17,flippers
+humpback whale,17,tail
+humpback whale,17,strainteeth
+humpback whale,17,swims
+humpback whale,17,fast
+humpback whale,17,slow
+humpback whale,17,strong
+humpback whale,17,muscle
+humpback whale,17,inactive
+humpback whale,17,fish
+humpback whale,17,plankton
+humpback whale,17,skimmer
+humpback whale,17,newworld
+humpback whale,17,oldworld
+humpback whale,17,arctic
+humpback whale,17,coastal
+humpback whale,17,ocean
+humpback whale,17,water
+humpback whale,17,timid
+humpback whale,17,smart
+humpback whale,17,group
+elephant,18,gray
+elephant,18,hairless
+elephant,18,toughskin
+elephant,18,big
+elephant,18,bulbous
+elephant,18,longleg
+elephant,18,tail
+elephant,18,chewteeth
+elephant,18,tusks
+elephant,18,smelly
+elephant,18,walks
+elephant,18,slow
+elephant,18,strong
+elephant,18,muscle
+elephant,18,quadrapedal
+elephant,18,inactive
+elephant,18,vegetation
+elephant,18,grazer
+elephant,18,oldworld
+elephant,18,bush
+elephant,18,jungle
+elephant,18,ground
+elephant,18,timid
+elephant,18,smart
+elephant,18,group
+gorilla,19,black
+gorilla,19,brown
+gorilla,19,furry
+gorilla,19,toughskin
+gorilla,19,big
+gorilla,19,bulbous
+gorilla,19,hands
+gorilla,19,longleg
+gorilla,19,chewteeth
+gorilla,19,meatteeth
+gorilla,19,smelly
+gorilla,19,walks
+gorilla,19,fast
+gorilla,19,strong
+gorilla,19,muscle
+gorilla,19,bipedal
+gorilla,19,quadrapedal
+gorilla,19,active
+gorilla,19,agility
+gorilla,19,meat
+gorilla,19,vegetation
+gorilla,19,forager
+gorilla,19,oldworld
+gorilla,19,forest
+gorilla,19,jungle
+gorilla,19,ground
+gorilla,19,tree
+gorilla,19,fierce
+gorilla,19,smart
+gorilla,19,group
+gorilla,19,nestspot
+ox,20,black
+ox,20,white
+ox,20,brown
+ox,20,gray
+ox,20,furry
+ox,20,hairless
+ox,20,toughskin
+ox,20,big
+ox,20,bulbous
+ox,20,hooves
+ox,20,tail
+ox,20,chewteeth
+ox,20,horns
+ox,20,smelly
+ox,20,walks
+ox,20,slow
+ox,20,strong
+ox,20,muscle
+ox,20,quadrapedal
+ox,20,inactive
+ox,20,vegetation
+ox,20,grazer
+ox,20,newworld
+ox,20,oldworld
+ox,20,bush
+ox,20,plains
+ox,20,fields
+ox,20,ground
+ox,20,timid
+ox,20,solitary
+ox,20,domestic
+fox,21,brown
+fox,21,orange
+fox,21,red
+fox,21,furry
+fox,21,small
+fox,21,lean
+fox,21,pads
+fox,21,paws
+fox,21,tail
+fox,21,chewteeth
+fox,21,meatteeth
+fox,21,claws
+fox,21,walks
+fox,21,fast
+fox,21,strong
+fox,21,muscle
+fox,21,quadrapedal
+fox,21,active
+fox,21,nocturnal
+fox,21,hibernate
+fox,21,agility
+fox,21,fish
+fox,21,meat
+fox,21,forager
+fox,21,hunter
+fox,21,stalker
+fox,21,newworld
+fox,21,oldworld
+fox,21,plains
+fox,21,forest
+fox,21,fields
+fox,21,ground
+fox,21,fierce
+fox,21,smart
+fox,21,solitary
+fox,21,nestspot
+sheep,22,black
+sheep,22,white
+sheep,22,furry
+sheep,22,bulbous
+sheep,22,hooves
+sheep,22,chewteeth
+sheep,22,smelly
+sheep,22,walks
+sheep,22,slow
+sheep,22,weak
+sheep,22,quadrapedal
+sheep,22,inactive
+sheep,22,vegetation
+sheep,22,grazer
+sheep,22,newworld
+sheep,22,oldworld
+sheep,22,plains
+sheep,22,fields
+sheep,22,mountains
+sheep,22,ground
+sheep,22,timid
+sheep,22,group
+sheep,22,domestic
+seal,23,black
+seal,23,white
+seal,23,brown
+seal,23,gray
+seal,23,spots
+seal,23,hairless
+seal,23,toughskin
+seal,23,big
+seal,23,small
+seal,23,flippers
+seal,23,tail
+seal,23,swims
+seal,23,fast
+seal,23,slow
+seal,23,strong
+seal,23,active
+seal,23,inactive
+seal,23,agility
+seal,23,fish
+seal,23,hunter
+seal,23,newworld
+seal,23,oldworld
+seal,23,arctic
+seal,23,coastal
+seal,23,ocean
+seal,23,water
+seal,23,timid
+seal,23,smart
+seal,23,group
+seal,23,domestic
+chimpanzee,24,black
+chimpanzee,24,brown
+chimpanzee,24,furry
+chimpanzee,24,toughskin
+chimpanzee,24,big
+chimpanzee,24,small
+chimpanzee,24,lean
+chimpanzee,24,hands
+chimpanzee,24,longleg
+chimpanzee,24,tail
+chimpanzee,24,chewteeth
+chimpanzee,24,meatteeth
+chimpanzee,24,smelly
+chimpanzee,24,walks
+chimpanzee,24,fast
+chimpanzee,24,strong
+chimpanzee,24,muscle
+chimpanzee,24,bipedal
+chimpanzee,24,quadrapedal
+chimpanzee,24,active
+chimpanzee,24,agility
+chimpanzee,24,vegetation
+chimpanzee,24,insects
+chimpanzee,24,forager
+chimpanzee,24,newworld
+chimpanzee,24,oldworld
+chimpanzee,24,bush
+chimpanzee,24,forest
+chimpanzee,24,jungle
+chimpanzee,24,mountains
+chimpanzee,24,ground
+chimpanzee,24,tree
+chimpanzee,24,fierce
+chimpanzee,24,timid
+chimpanzee,24,smart
+chimpanzee,24,group
+chimpanzee,24,nestspot
+chimpanzee,24,domestic
+hamster,25,black
+hamster,25,white
+hamster,25,brown
+hamster,25,gray
+hamster,25,patches
+hamster,25,furry
+hamster,25,small
+hamster,25,bulbous
+hamster,25,paws
+hamster,25,tail
+hamster,25,chewteeth
+hamster,25,buckteeth
+hamster,25,claws
+hamster,25,smelly
+hamster,25,hops
+hamster,25,tunnels
+hamster,25,walks
+hamster,25,fast
+hamster,25,weak
+hamster,25,quadrapedal
+hamster,25,active
+hamster,25,inactive
+hamster,25,nocturnal
+hamster,25,hibernate
+hamster,25,agility
+hamster,25,vegetation
+hamster,25,forager
+hamster,25,grazer
+hamster,25,newworld
+hamster,25,fields
+hamster,25,ground
+hamster,25,timid
+hamster,25,solitary
+hamster,25,nestspot
+hamster,25,domestic
+squirrel,26,brown
+squirrel,26,gray
+squirrel,26,furry
+squirrel,26,small
+squirrel,26,pads
+squirrel,26,paws
+squirrel,26,tail
+squirrel,26,chewteeth
+squirrel,26,buckteeth
+squirrel,26,claws
+squirrel,26,hops
+squirrel,26,walks
+squirrel,26,fast
+squirrel,26,bipedal
+squirrel,26,quadrapedal
+squirrel,26,active
+squirrel,26,hibernate
+squirrel,26,agility
+squirrel,26,vegetation
+squirrel,26,forager
+squirrel,26,newworld
+squirrel,26,oldworld
+squirrel,26,forest
+squirrel,26,ground
+squirrel,26,tree
+squirrel,26,timid
+squirrel,26,solitary
+squirrel,26,nestspot
+rhinoceros,27,gray
+rhinoceros,27,hairless
+rhinoceros,27,toughskin
+rhinoceros,27,big
+rhinoceros,27,bulbous
+rhinoceros,27,hooves
+rhinoceros,27,horns
+rhinoceros,27,tusks
+rhinoceros,27,smelly
+rhinoceros,27,walks
+rhinoceros,27,slow
+rhinoceros,27,strong
+rhinoceros,27,quadrapedal
+rhinoceros,27,inactive
+rhinoceros,27,vegetation
+rhinoceros,27,grazer
+rhinoceros,27,oldworld
+rhinoceros,27,bush
+rhinoceros,27,jungle
+rhinoceros,27,ground
+rhinoceros,27,fierce
+rhinoceros,27,group
+rhinoceros,27,solitary
+rabbit,28,black
+rabbit,28,white
+rabbit,28,brown
+rabbit,28,gray
+rabbit,28,patches
+rabbit,28,furry
+rabbit,28,small
+rabbit,28,bulbous
+rabbit,28,paws
+rabbit,28,tail
+rabbit,28,chewteeth
+rabbit,28,buckteeth
+rabbit,28,hops
+rabbit,28,fast
+rabbit,28,weak
+rabbit,28,quadrapedal
+rabbit,28,active
+rabbit,28,inactive
+rabbit,28,agility
+rabbit,28,vegetation
+rabbit,28,forager
+rabbit,28,grazer
+rabbit,28,newworld
+rabbit,28,oldworld
+rabbit,28,bush
+rabbit,28,plains
+rabbit,28,forest
+rabbit,28,fields
+rabbit,28,ground
+rabbit,28,timid
+rabbit,28,group
+rabbit,28,nestspot
+rabbit,28,domestic
+bat,29,black
+bat,29,brown
+bat,29,gray
+bat,29,furry
+bat,29,hairless
+bat,29,toughskin
+bat,29,small
+bat,29,lean
+bat,29,chewteeth
+bat,29,meatteeth
+bat,29,claws
+bat,29,smelly
+bat,29,flys
+bat,29,fast
+bat,29,weak
+bat,29,muscle
+bat,29,bipedal
+bat,29,active
+bat,29,inactive
+bat,29,nocturnal
+bat,29,hibernate
+bat,29,agility
+bat,29,meat
+bat,29,vegetation
+bat,29,insects
+bat,29,forager
+bat,29,hunter
+bat,29,scavenger
+bat,29,newworld
+bat,29,oldworld
+bat,29,forest
+bat,29,jungle
+bat,29,mountains
+bat,29,tree
+bat,29,cave
+bat,29,fierce
+bat,29,smart
+bat,29,group
+bat,29,nestspot
+giraffe,30,brown
+giraffe,30,orange
+giraffe,30,yellow
+giraffe,30,patches
+giraffe,30,spots
+giraffe,30,big
+giraffe,30,lean
+giraffe,30,hooves
+giraffe,30,longleg
+giraffe,30,longneck
+giraffe,30,tail
+giraffe,30,chewteeth
+giraffe,30,horns
+giraffe,30,smelly
+giraffe,30,walks
+giraffe,30,fast
+giraffe,30,slow
+giraffe,30,strong
+giraffe,30,muscle
+giraffe,30,quadrapedal
+giraffe,30,active
+giraffe,30,inactive
+giraffe,30,vegetation
+giraffe,30,grazer
+giraffe,30,oldworld
+giraffe,30,bush
+giraffe,30,plains
+giraffe,30,fields
+giraffe,30,ground
+giraffe,30,timid
+giraffe,30,group
+wolf,31,black
+wolf,31,white
+wolf,31,brown
+wolf,31,gray
+wolf,31,furry
+wolf,31,big
+wolf,31,lean
+wolf,31,pads
+wolf,31,paws
+wolf,31,tail
+wolf,31,chewteeth
+wolf,31,meatteeth
+wolf,31,claws
+wolf,31,walks
+wolf,31,fast
+wolf,31,strong
+wolf,31,muscle
+wolf,31,quadrapedal
+wolf,31,active
+wolf,31,nocturnal
+wolf,31,agility
+wolf,31,meat
+wolf,31,forager
+wolf,31,hunter
+wolf,31,scavenger
+wolf,31,stalker
+wolf,31,newworld
+wolf,31,oldworld
+wolf,31,arctic
+wolf,31,plains
+wolf,31,forest
+wolf,31,mountains
+wolf,31,ground
+wolf,31,cave
+wolf,31,fierce
+wolf,31,smart
+wolf,31,group
+wolf,31,solitary
+chihuahua,32,black
+chihuahua,32,brown
+chihuahua,32,gray
+chihuahua,32,furry
+chihuahua,32,small
+chihuahua,32,lean
+chihuahua,32,pads
+chihuahua,32,paws
+chihuahua,32,tail
+chihuahua,32,meatteeth
+chihuahua,32,claws
+chihuahua,32,smelly
+chihuahua,32,walks
+chihuahua,32,fast
+chihuahua,32,weak
+chihuahua,32,quadrapedal
+chihuahua,32,active
+chihuahua,32,meat
+chihuahua,32,newworld
+chihuahua,32,oldworld
+chihuahua,32,ground
+chihuahua,32,fierce
+chihuahua,32,timid
+chihuahua,32,smart
+chihuahua,32,solitary
+chihuahua,32,domestic
+rat,33,black
+rat,33,white
+rat,33,brown
+rat,33,gray
+rat,33,furry
+rat,33,small
+rat,33,bulbous
+rat,33,lean
+rat,33,paws
+rat,33,tail
+rat,33,meatteeth
+rat,33,buckteeth
+rat,33,claws
+rat,33,smelly
+rat,33,tunnels
+rat,33,walks
+rat,33,fast
+rat,33,quadrapedal
+rat,33,active
+rat,33,nocturnal
+rat,33,hibernate
+rat,33,agility
+rat,33,meat
+rat,33,insects
+rat,33,forager
+rat,33,hunter
+rat,33,scavenger
+rat,33,newworld
+rat,33,oldworld
+rat,33,plains
+rat,33,forest
+rat,33,fields
+rat,33,ground
+rat,33,fierce
+rat,33,smart
+rat,33,solitary
+rat,33,nestspot
+weasel,34,black
+weasel,34,brown
+weasel,34,gray
+weasel,34,furry
+weasel,34,small
+weasel,34,lean
+weasel,34,paws
+weasel,34,tail
+weasel,34,chewteeth
+weasel,34,meatteeth
+weasel,34,claws
+weasel,34,smelly
+weasel,34,tunnels
+weasel,34,walks
+weasel,34,fast
+weasel,34,muscle
+weasel,34,quadrapedal
+weasel,34,active
+weasel,34,nocturnal
+weasel,34,agility
+weasel,34,meat
+weasel,34,forager
+weasel,34,hunter
+weasel,34,newworld
+weasel,34,oldworld
+weasel,34,forest
+weasel,34,fields
+weasel,34,ground
+weasel,34,fierce
+weasel,34,smart
+weasel,34,solitary
+otter,35,black
+otter,35,brown
+otter,35,furry
+otter,35,small
+otter,35,bulbous
+otter,35,lean
+otter,35,flippers
+otter,35,paws
+otter,35,tail
+otter,35,chewteeth
+otter,35,meatteeth
+otter,35,buckteeth
+otter,35,claws
+otter,35,swims
+otter,35,fast
+otter,35,quadrapedal
+otter,35,active
+otter,35,agility
+otter,35,fish
+otter,35,hunter
+otter,35,newworld
+otter,35,oldworld
+otter,35,arctic
+otter,35,coastal
+otter,35,forest
+otter,35,ocean
+otter,35,water
+otter,35,timid
+otter,35,smart
+otter,35,solitary
+otter,35,nestspot
+buffalo,36,black
+buffalo,36,brown
+buffalo,36,furry
+buffalo,36,toughskin
+buffalo,36,big
+buffalo,36,bulbous
+buffalo,36,hooves
+buffalo,36,chewteeth
+buffalo,36,horns
+buffalo,36,smelly
+buffalo,36,walks
+buffalo,36,fast
+buffalo,36,slow
+buffalo,36,strong
+buffalo,36,muscle
+buffalo,36,quadrapedal
+buffalo,36,inactive
+buffalo,36,vegetation
+buffalo,36,forager
+buffalo,36,grazer
+buffalo,36,newworld
+buffalo,36,plains
+buffalo,36,ground
+buffalo,36,fierce
+buffalo,36,group
+zebra,37,black
+zebra,37,white
+zebra,37,stripes
+zebra,37,furry
+zebra,37,toughskin
+zebra,37,big
+zebra,37,lean
+zebra,37,hooves
+zebra,37,longleg
+zebra,37,longneck
+zebra,37,tail
+zebra,37,chewteeth
+zebra,37,walks
+zebra,37,fast
+zebra,37,strong
+zebra,37,muscle
+zebra,37,quadrapedal
+zebra,37,active
+zebra,37,agility
+zebra,37,vegetation
+zebra,37,forager
+zebra,37,grazer
+zebra,37,oldworld
+zebra,37,bush
+zebra,37,plains
+zebra,37,fields
+zebra,37,ground
+zebra,37,timid
+zebra,37,smart
+zebra,37,group
+giant panda,38,black
+giant panda,38,white
+giant panda,38,patches
+giant panda,38,spots
+giant panda,38,furry
+giant panda,38,big
+giant panda,38,bulbous
+giant panda,38,pads
+giant panda,38,paws
+giant panda,38,chewteeth
+giant panda,38,buckteeth
+giant panda,38,claws
+giant panda,38,walks
+giant panda,38,slow
+giant panda,38,strong
+giant panda,38,bipedal
+giant panda,38,quadrapedal
+giant panda,38,inactive
+giant panda,38,fish
+giant panda,38,vegetation
+giant panda,38,forager
+giant panda,38,grazer
+giant panda,38,newworld
+giant panda,38,oldworld
+giant panda,38,bush
+giant panda,38,forest
+giant panda,38,jungle
+giant panda,38,ground
+giant panda,38,tree
+giant panda,38,timid
+giant panda,38,smart
+giant panda,38,group
+giant panda,38,solitary
+giant panda,38,nestspot
+giant panda,38,domestic
+deer,39,brown
+deer,39,patches
+deer,39,spots
+deer,39,furry
+deer,39,big
+deer,39,lean
+deer,39,hooves
+deer,39,longleg
+deer,39,longneck
+deer,39,tail
+deer,39,chewteeth
+deer,39,horns
+deer,39,walks
+deer,39,fast
+deer,39,strong
+deer,39,muscle
+deer,39,quadrapedal
+deer,39,active
+deer,39,agility
+deer,39,vegetation
+deer,39,forager
+deer,39,grazer
+deer,39,newworld
+deer,39,oldworld
+deer,39,plains
+deer,39,forest
+deer,39,fields
+deer,39,mountains
+deer,39,ground
+deer,39,timid
+deer,39,smart
+deer,39,group
+deer,39,nestspot
+bobcat,40,brown
+bobcat,40,orange
+bobcat,40,yellow
+bobcat,40,spots
+bobcat,40,furry
+bobcat,40,small
+bobcat,40,lean
+bobcat,40,pads
+bobcat,40,paws
+bobcat,40,tail
+bobcat,40,meatteeth
+bobcat,40,claws
+bobcat,40,walks
+bobcat,40,fast
+bobcat,40,strong
+bobcat,40,muscle
+bobcat,40,quadrapedal
+bobcat,40,active
+bobcat,40,hibernate
+bobcat,40,agility
+bobcat,40,meat
+bobcat,40,forager
+bobcat,40,hunter
+bobcat,40,stalker
+bobcat,40,newworld
+bobcat,40,oldworld
+bobcat,40,plains
+bobcat,40,forest
+bobcat,40,mountains
+bobcat,40,ground
+bobcat,40,tree
+bobcat,40,cave
+bobcat,40,fierce
+bobcat,40,smart
+bobcat,40,solitary
+pig,41,black
+pig,41,white
+pig,41,brown
+pig,41,gray
+pig,41,patches
+pig,41,spots
+pig,41,hairless
+pig,41,toughskin
+pig,41,big
+pig,41,bulbous
+pig,41,hooves
+pig,41,tail
+pig,41,chewteeth
+pig,41,smelly
+pig,41,walks
+pig,41,slow
+pig,41,strong
+pig,41,quadrapedal
+pig,41,inactive
+pig,41,vegetation
+pig,41,forager
+pig,41,newworld
+pig,41,oldworld
+pig,41,fields
+pig,41,ground
+pig,41,fierce
+pig,41,timid
+pig,41,smart
+pig,41,group
+pig,41,domestic
+lion,42,brown
+lion,42,yellow
+lion,42,furry
+lion,42,big
+lion,42,bulbous
+lion,42,lean
+lion,42,pads
+lion,42,paws
+lion,42,tail
+lion,42,meatteeth
+lion,42,claws
+lion,42,smelly
+lion,42,walks
+lion,42,fast
+lion,42,strong
+lion,42,muscle
+lion,42,quadrapedal
+lion,42,active
+lion,42,inactive
+lion,42,agility
+lion,42,meat
+lion,42,forager
+lion,42,hunter
+lion,42,stalker
+lion,42,oldworld
+lion,42,desert
+lion,42,bush
+lion,42,forest
+lion,42,jungle
+lion,42,mountains
+lion,42,ground
+lion,42,fierce
+lion,42,smart
+lion,42,group
+lion,42,nestspot
+mouse,43,white
+mouse,43,brown
+mouse,43,gray
+mouse,43,furry
+mouse,43,small
+mouse,43,paws
+mouse,43,tail
+mouse,43,chewteeth
+mouse,43,buckteeth
+mouse,43,smelly
+mouse,43,tunnels
+mouse,43,walks
+mouse,43,fast
+mouse,43,weak
+mouse,43,quadrapedal
+mouse,43,active
+mouse,43,nocturnal
+mouse,43,hibernate
+mouse,43,agility
+mouse,43,vegetation
+mouse,43,grazer
+mouse,43,scavenger
+mouse,43,newworld
+mouse,43,oldworld
+mouse,43,plains
+mouse,43,forest
+mouse,43,fields
+mouse,43,ground
+mouse,43,timid
+mouse,43,group
+mouse,43,nestspot
+mouse,43,domestic
+polar bear,44,white
+polar bear,44,furry
+polar bear,44,toughskin
+polar bear,44,big
+polar bear,44,bulbous
+polar bear,44,pads
+polar bear,44,paws
+polar bear,44,chewteeth
+polar bear,44,meatteeth
+polar bear,44,claws
+polar bear,44,smelly
+polar bear,44,swims
+polar bear,44,walks
+polar bear,44,fast
+polar bear,44,slow
+polar bear,44,strong
+polar bear,44,bipedal
+polar bear,44,quadrapedal
+polar bear,44,active
+polar bear,44,inactive
+polar bear,44,hibernate
+polar bear,44,agility
+polar bear,44,fish
+polar bear,44,meat
+polar bear,44,forager
+polar bear,44,hunter
+polar bear,44,scavenger
+polar bear,44,stalker
+polar bear,44,newworld
+polar bear,44,oldworld
+polar bear,44,arctic
+polar bear,44,coastal
+polar bear,44,ocean
+polar bear,44,ground
+polar bear,44,water
+polar bear,44,fierce
+polar bear,44,solitary
+collie,45,white
+collie,45,brown
+collie,45,patches
+collie,45,furry
+collie,45,big
+collie,45,small
+collie,45,lean
+collie,45,paws
+collie,45,tail
+collie,45,chewteeth
+collie,45,meatteeth
+collie,45,walks
+collie,45,fast
+collie,45,quadrapedal
+collie,45,active
+collie,45,agility
+collie,45,meat
+collie,45,hunter
+collie,45,newworld
+collie,45,oldworld
+collie,45,ground
+collie,45,timid
+collie,45,smart
+collie,45,solitary
+collie,45,domestic
+walrus,46,brown
+walrus,46,gray
+walrus,46,hairless
+walrus,46,toughskin
+walrus,46,big
+walrus,46,bulbous
+walrus,46,flippers
+walrus,46,chewteeth
+walrus,46,meatteeth
+walrus,46,buckteeth
+walrus,46,strainteeth
+walrus,46,tusks
+walrus,46,smelly
+walrus,46,swims
+walrus,46,fast
+walrus,46,slow
+walrus,46,strong
+walrus,46,inactive
+walrus,46,fish
+walrus,46,newworld
+walrus,46,arctic
+walrus,46,coastal
+walrus,46,ocean
+walrus,46,water
+walrus,46,timid
+walrus,46,smart
+walrus,46,group
+walrus,46,nestspot
+raccoon,47,black
+raccoon,47,white
+raccoon,47,gray
+raccoon,47,patches
+raccoon,47,spots
+raccoon,47,stripes
+raccoon,47,furry
+raccoon,47,small
+raccoon,47,pads
+raccoon,47,paws
+raccoon,47,tail
+raccoon,47,chewteeth
+raccoon,47,meatteeth
+raccoon,47,claws
+raccoon,47,walks
+raccoon,47,fast
+raccoon,47,quadrapedal
+raccoon,47,active
+raccoon,47,nocturnal
+raccoon,47,hibernate
+raccoon,47,agility
+raccoon,47,fish
+raccoon,47,meat
+raccoon,47,vegetation
+raccoon,47,forager
+raccoon,47,scavenger
+raccoon,47,newworld
+raccoon,47,oldworld
+raccoon,47,forest
+raccoon,47,fields
+raccoon,47,mountains
+raccoon,47,ground
+raccoon,47,tree
+raccoon,47,fierce
+raccoon,47,smart
+raccoon,47,solitary
+raccoon,47,nestspot
+cow,48,black
+cow,48,white
+cow,48,brown
+cow,48,patches
+cow,48,spots
+cow,48,furry
+cow,48,toughskin
+cow,48,big
+cow,48,bulbous
+cow,48,hooves
+cow,48,tail
+cow,48,chewteeth
+cow,48,horns
+cow,48,smelly
+cow,48,walks
+cow,48,slow
+cow,48,strong
+cow,48,quadrapedal
+cow,48,active
+cow,48,inactive
+cow,48,vegetation
+cow,48,grazer
+cow,48,newworld
+cow,48,oldworld
+cow,48,plains
+cow,48,fields
+cow,48,ground
+cow,48,timid
+cow,48,group
+cow,48,domestic
+dolphin,49,white
+dolphin,49,blue
+dolphin,49,gray
+dolphin,49,hairless
+dolphin,49,toughskin
+dolphin,49,big
+dolphin,49,lean
+dolphin,49,flippers
+dolphin,49,tail
+dolphin,49,chewteeth
+dolphin,49,swims
+dolphin,49,fast
+dolphin,49,strong
+dolphin,49,muscle
+dolphin,49,active
+dolphin,49,agility
+dolphin,49,fish
+dolphin,49,newworld
+dolphin,49,oldworld
+dolphin,49,coastal
+dolphin,49,ocean
+dolphin,49,water
+dolphin,49,timid
+dolphin,49,smart
+dolphin,49,group
+dolphin,49,domestic
