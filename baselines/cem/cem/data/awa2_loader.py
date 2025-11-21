@@ -27,7 +27,7 @@ N_CONCEPTS = 85
 class AwA2Dataset(Dataset):
     def __init__(
         self,
-        data_dir="/data1/ai22resch11001/projects/data/AWA2/Animals_with_Attributes2",
+        data_dir="./DATA/AWA2/Animals_with_Attributes2",
         transform=None,
         split="train",
         apply_corruption=False,

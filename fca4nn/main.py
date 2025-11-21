@@ -196,18 +196,18 @@ if __name__ == "__main__":
         "--dataset", type=str, default="imagenet100", help="Dataset name"
     )
     parser.add_argument(
-        "--data_root", type=str, default="./data/", help="Path to data root"
+        "--data_root", type=str, default="./DATA/", help="Path to data root"
     )
     parser.add_argument(
         "--concept_file",
         type=str,
-        default="./data/concept_files/",
+        default="./DATA/concept_files/",
         help="Path to concept file",
     )
     parser.add_argument(
         "--lattice_path",
         type=str,
-        default="./data/lattices/",
+        default="./DATA/lattices/",
         help="Path to lattice file",
     )
     parser.add_argument("--epochs", type=int, default=30, help="Number of epochs")

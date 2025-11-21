@@ -273,7 +273,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--lattice_path",
         type=str,
-        default="./data/lattices/",
+        default="./DATA/lattices/",
         help="Path to lattice file",
     )
     parser.add_argument(

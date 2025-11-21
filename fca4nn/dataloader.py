@@ -420,7 +420,7 @@ class Awa2ClassLevelDataset(Dataset):
         # sampled_df = df.groupby("class", group_keys=False).apply(lambda x: x.sample(frac=0.25, random_state=42)).sample(frac=1, random_state=42)
         # sampled_df["id"] = sampled_df["id"].astype(int)
         # sampled_df = sampled_df.drop(columns=["class"])
-        # sampled_df.to_csv("/data1/ai22resch11001/projects/data/AWA2/Animals_with_Attributes2/train_quarter.csv", index=False)
+        # sampled_df.to_csv("./DATA/AWA2/Animals_with_Attributes2/train_quarter.csv", index=False)
         # exit(0)
 
         self.img_names = df["img_name"].tolist()

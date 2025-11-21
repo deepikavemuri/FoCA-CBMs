@@ -92,7 +92,7 @@ def train_and_validate(
     args, train_dataset, val_dataset, test_dataset, model, num_clfs=1, logger=None
 ):
     if args.wandb:
-        wandb.init(project="fca_intsem", entity="ai22resch11001", config=args)
+        wandb.init(project="fca_intsem", entity="user", config=args)
         wandb.run.name = f"fca4nn_{args.dataset}_{wandb.run.name}"
 
         wandb.watch(model, log="all", log_freq=args.verbose)

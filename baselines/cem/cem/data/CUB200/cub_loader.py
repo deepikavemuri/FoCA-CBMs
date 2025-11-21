@@ -753,7 +753,7 @@ class CUBDataset(Dataset):
         uncertain_label,
         image_dir,
         n_class_attr,
-        root_dir="../data/CUB200/",
+        root_dir="../DATA/CUB200/",
         path_transform=None,
         transform=None,
         concept_transform=None,
@@ -796,7 +796,7 @@ class CUBDataset(Dataset):
         if self.path_transform == None:
             img_path = img_path.replace(
                 "/juice/scr/scr102/scr/thaonguyen/CUB_supervision/datasets/",
-                "../data/CUB200/",
+                "../DATA/CUB200/",
             )
             # Trim unnecessary paths
             try:
@@ -911,7 +911,7 @@ def load_data(
     image_dir="images",
     resampling=False,
     resol=299,
-    root_dir="../data/CUB200/",
+    root_dir="../DATA/CUB200/",
     num_workers=1,
     concept_transform=None,
     label_transform=None,

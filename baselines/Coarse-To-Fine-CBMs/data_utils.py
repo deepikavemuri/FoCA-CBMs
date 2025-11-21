@@ -11,7 +11,7 @@ base_path = ""
 # the paths for the datasets
 datasets_paths = {
     "imagenet": base_path + "data/imagenet",
-    "cub": "/DATA/ai22resch11001/projects/data/CUB_200_2011",
+    "cub": "./DATA/CUB_200_2011",
     "places365": base_path + "data/places365",
     "sun": base_path + "data/SUN",
     "imagenet100": "./../DATA/inet100",

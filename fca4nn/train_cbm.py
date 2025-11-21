@@ -109,7 +109,7 @@ def train_and_validate(args, model, train_dataset, val_dataset, logger=None):
     )
 
     if args.wandb:
-        wandb.init(project="fca_intsem", entity="ai22resch11001", config=args)
+        wandb.init(project="fca_intsem", entity="user", config=args)
         wandb.run.name = f"fca4nn_{args.dataset}_{wandb.run.name}"
 
         wandb.watch(model, log="all", log_freq=args.verbose)
@@ -221,13 +221,13 @@ if __name__ == "__main__":
     parser.add_argument(
         "--data_dir",
         type=str,
-        default="./data",
+        default="./DATA",
         help="Path to dataset",
     )
     parser.add_argument(
         "--concept_file",
         type=str,
-        default="./data/imagenet100_concept.json",
+        default="./DATA/imagenet100_concept.json",
         help="Path to concept file",
     )
     parser.add_argument(
