@@ -35,7 +35,7 @@ Concept-based models (CBMs) learn interpretable predictions by routing classific
 
 ```bash
 # Clone the repository
-git clone https://github.com/<username>/FoCA-CBMs.git
+git clone https://github.com/deepikavemuri/FoCA-CBMs.git
 cd FoCA-CBMs
 
 # Create conda environment
@@ -226,15 +226,15 @@ Supported model identifiers for `--model_name`:
 
 We include implementations of several baselines adapted for our experimental setup. Each baseline folder contains its own `run.sh` and `README.md`:
 
-| Baseline       | Reference                |    Venue     | README |
-| -------------- | ------------------------ | :----------: | :----: |
-| Post-hoc CBM   | Yuksekgonul et al.       |  ICLR 2023   | [→ Instructions](baselines/post-hoc-cbm/README.md) |
-| Label-free CBM | Oikarinen et al.         |  ICLR 2023   | [→ Instructions](baselines/Label-free-CBM/README.md) |
-| CEM            | Espinosa Zarlenga et al. | NeurIPS 2022 | [→ Instructions](baselines/cem/README.md) |
-| LaBo           | Yang et al.              |  CVPR 2023   | [→ Instructions](baselines/LaBo/README.md) |
-| SCBM           | Vandenhirtz et al.       | NeurIPS 2024 | [→ Instructions](baselines/SCBM/README.md) |
+| Baseline       | Reference                |    Venue     |                          README                           |
+| -------------- | ------------------------ | :----------: | :-------------------------------------------------------: |
+| Post-hoc CBM   | Yuksekgonul et al.       |  ICLR 2023   |    [→ Instructions](baselines/post-hoc-cbm/README.md)     |
+| Label-free CBM | Oikarinen et al.         |  ICLR 2023   |   [→ Instructions](baselines/Label-free-CBM/README.md)    |
+| CEM            | Espinosa Zarlenga et al. | NeurIPS 2022 |         [→ Instructions](baselines/cem/README.md)         |
+| LaBo           | Yang et al.              |  CVPR 2023   |        [→ Instructions](baselines/LaBo/README.md)         |
+| SCBM           | Vandenhirtz et al.       | NeurIPS 2024 |        [→ Instructions](baselines/SCBM/README.md)         |
 | CF-CBM         | Panousis et al.          | NeurIPS 2024 | [→ Instructions](baselines/Coarse-To-Fine-CBMs/README.md) |
-| HybridCBM      | Liu et al.               |  CVPR 2025   | [→ Instructions](baselines/HybridCBM/README.md) |
+| HybridCBM      | Liu et al.               |  CVPR 2025   |      [→ Instructions](baselines/HybridCBM/README.md)      |
 
 ---
 
