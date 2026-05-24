@@ -1,4 +1,4 @@
-# 🧩 FoCA-CBMs: Formal Concept Analysis for Concept-Based Models
+# 🧩 Formal Concept Lattices are Good Semantic Scaffolds for Concept-Based Learning
 
 <p align="center">
   <b>Lattices for Concept-Based Learning</b><br>
