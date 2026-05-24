@@ -1,3 +1,11 @@
+"""
+Entry point for FoCA-CBM training and evaluation.
+
+Parses command-line arguments, initializes datasets with multi-level FCA lattice
+annotations, constructs the hierarchical concept bottleneck model, and launches
+training/testing via train_foca.train_and_validate.
+"""
+
 import os
 import sys
 import json

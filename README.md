@@ -1,158 +1,258 @@
-# Repository for FoCA-CBM
+# 🧩 FoCA-CBMs: Formal Concept Analysis for Concept-Based Models
 
-### File Structure
+<p align="center">
+  <b>Lattices for Concept-Based Learning</b><br>
+  <i>ICML 2026</i>
+</p>
 
-`baselines` contains code for few of the baselines used in the paper
+<p align="center">
+  <a href="https://arxiv.org/abs/XXXX.XXXXX"><img src="https://img.shields.io/badge/arXiv-Paper-red"></a>
+  <a href="#citation"><img src="https://img.shields.io/badge/ICML-2026-blue"></a>
+</p>
 
-`fca4nn` contains code for Vanilla-CBM, MLP-CBM, and both of our methods, FoCA-CBMs 
+<p align="center">
+  <img src="figures/foca_cbms.png" width="90%" alt="FoCA-CBMs Overview"/>
+</p>
 
-`DATA` contains the concept set used for all the datasets and lattices that were generated using FCA for each of the datasets.
+> **Figure:** A formal concept lattice is constructed from class-attribute associations *(top)*. The lattice's hierarchical levels are aligned with intermediate network blocks using class-cluster density, enabling staged semantic supervision throughout the network's depth *(bottom)*.
 
-## How to RUN
+---
 
-### FoCA CBM
+## 🔍 Overview
 
-In `fca4nn` folder, inside the `scripts` subfolder contains scripts to run FoCA-CBM for each of the datasets. 
+Concept-based models (CBMs) learn interpretable predictions by routing classification through human-understandable concepts. However, existing CBMs treat all concepts as a flat set learned at a single network layer, ignoring the hierarchical nature of both human semantic understanding and neural network representations.
 
-Inside the scripts, change the path for the datasets and other required paths.
+**FoCA-CBMs** leverage *Formal Concept Analysis* (FCA) to construct principled semantic lattices from class-attribute relationships. These lattices identify natural supervision points in the network — general concepts (shared by many classes) supervise early layers, while specific concepts (shared by few) supervise deeper layers. This creates a *semantic scaffold* over the network's visual feature hierarchy, enabling:
 
-For example: 
+- 🏗️ Hierarchically structured concept representations across network depth
+- 📊 More semantically meaningful intermediate embeddings (lower cluster impurity and compactness scores)
+- 🔧 Effective multi-level concept interventions
+- 🎯 Competitive or superior classification accuracy
+
+---
+
+## ⚙️ Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/<username>/FoCA-CBMs.git
+cd FoCA-CBMs
+
+# Create conda environment
+conda env create -f fca4nn/environment.yml
+conda activate fca4nn
 ```
-python main.py \
-    --do_train \
+
+**Key dependencies:** Python 3.11, PyTorch 2.6, torchvision 0.21, timm 1.0.15, concepts 0.9.2, scikit-learn 1.6.1
+
+---
+
+## 📁 Repository Structure
+
+```
+FoCA-CBMs/
+├── fca4nn/                          # 🧠 Main codebase
+│   ├── main.py                      # Entry point for training FoCA CBMs
+│   ├── model.py                     # FoCA_CBM_resnet, FoCA_CBM_vit, CBM_resnet models
+│   ├── train_foca.py                # Training loop for FoCA CBMs
+│   ├── train_foca-n.py              # Training loop for FoCA CBM-N (naive variant)
+│   ├── train_cbm.py                 # Training loop for vanilla/MLP CBMs
+│   ├── losses.py                    # Loss functions (BCE, focal, hierarchical CE, dice)
+│   ├── dataloader.py                # Dataset classes for all benchmarks
+│   ├── utils.py                     # Training utilities
+│   ├── metric_calculator.py         # CI/DBI metric evaluation script
+│   ├── lattice_generation/
+│   │   └── generate_lattice.py      # Construct formal concept lattice from annotations
+│   ├── processing/                  # Lattice parsing and level extraction utilities
+│   ├── metric/                      # Cluster purity and separation metrics
+│   ├── analysis/
+│   │   └── interventions.ipynb      # Concept intervention experiments
+│   └── scripts/                     # Shell scripts to reproduce all experiments
+│       ├── foca/                    # FoCA CBM training scripts (ResNet)
+│       ├── foca/vit/               # FoCA CBM training scripts (ViT)
+│       ├── cbm/                    # Vanilla/MLP CBM training scripts
+│       └── metric/                 # Metric evaluation scripts
+├── DATA/                            # 📂 Pre-computed data artifacts
+│   ├── concepts/                    # Concept annotations (JSON + binary matrices)
+│   ├── lattices/                    # Pre-computed formal concept lattices (.pkl)
+│   └── classes/                     # Class lists per dataset
+└── baselines/                       # 🔬 Baseline implementations
+    ├── LaBo/
+    ├── Coarse-To-Fine-CBMs/
+    ├── post-hoc-cbm/
+    ├── HybridCBM/
+    ├── cem/
+    ├── SCBM/
+    └── Label-free-CBM/
+```
+
+---
+
+## 📦 Data Preparation
+
+### Datasets
+
+Download the following datasets and place them in your preferred data directory:
+
+| Dataset         | Source                                                       | Classes | Attributes |
+| --------------- | ------------------------------------------------------------ | :-----: | :--------: |
+| **ImageNet100** | [ILSVRC 2012](https://www.image-net.org/) (100-class subset) |   100   |    ~700    |
+| **AwA2**        | [Animals with Attributes 2](https://cvml.ista.ac.at/AwA2/)   |   50    |     85     |
+| **CIFAR100**    | [CIFAR-100](https://www.cs.toronto.edu/~kriz/cifar.html)     |   100   |    ~700    |
+
+### 🔗 Concept Annotations & Lattices
+
+Pre-computed concept annotations and formal concept lattices are provided in `DATA/`:
+- `DATA/concepts/` — Class-level attribute annotations as JSON files and binary concept matrices (`.npy`)
+- `DATA/lattices/` — Pre-built formal concept lattices (`.pkl`) for each dataset
+
+To **generate a lattice**:
+```bash
+cd fca4nn
+python lattice_generation/generate_lattice.py DATA/concepts/<dataset>_concepts.json \
+    -o DATA/lattices/<dataset>_context.pkl -v
+```
+
+---
+
+## 🚀 Training FoCA CBMs
+
+### Quick Start
+
+```bash
+cd fca4nn
+
+# Train FoCA CBM on CIFAR100 (ResNet-50)
+CUDA_VISIBLE_DEVICES=0 python main.py \
+    --do_train_full \
     --do_test \
     --seed 42 \
-    --dataset awa2 \
-    --model resnet18 \
+    --dataset cifar100 \
+    --model resnet50 \
     --concept_wts 0.01 \
     --cls_wts 0.01 \
-    --data_root <path to dataset folder> \
-    --concept_file <path to concept files> \
-    --lattice_path <path to dataset lattice> \
+    --data_root ./DATA/cifar100/ \
+    --concept_file ./DATA/concepts/cifar100_concepts.json \
+    --lattice_path ./DATA/lattices/cifar100_context.pkl \
     --num_clfs 2 \
-    --lattice_levels 1 3 \
+    --lattice_levels 1 2 \
     --backbone_layer_ids 3 4 \
     --lr 3e-4 \
     --epochs 75 \
-    --batch_size 256 \
-    --verbose 10 \
-    --keep_top_k 2 \
+    --batch_size 128 \
     --clf_special_init \
-    --save_model_dir <path to save logs and models>
+    --save_model_dir ./saved_models/
+```
 
+### 🔁 Reproducing All Experiments
 
-            OR
+Scripts for all datasets and configurations are provided in `fca4nn/scripts/`:
 
-# changes according to dataset.
-# the above path names need to be changed in the script files
+```bash
 cd fca4nn
-bash scripts/foca/inet100.sh 
+
+# 🏔️ ResNet-based FoCA CBMs
+bash scripts/foca/cifar100.sh      # CIFAR100
+bash scripts/foca/inet100.sh       # ImageNet100
+bash scripts/foca/awa2.sh          # AwA2
+
+# 🤖 ViT-based FoCA CBMs
+bash scripts/foca/vit/cifar100.sh  # CIFAR100 (DeiT-Base)
+bash scripts/foca/vit/inet100.sh   # ImageNet100 (DeiT-Base)
+bash scripts/foca/vit/awa2.sh      # AwA2 (DeiT-Base)
+
+# 📏 Vanilla CBM baselines
+bash scripts/cbm/cbm_cifar100.sh
+bash scripts/cbm/cbm_inet100.sh
+bash scripts/cbm/cbm_awa2.sh
 ```
 
-### Baselines
-Codes for baselines are taken from their respective repositories. Each of those folders has its own curated `run.sh` files which we execute to get baseline results
+> ⚠️ **Note:** Update `data_root`, `concept_file`, and `lattice_path` in the scripts to match your local paths.
 
-- CBMs: "Concept Bottleneck Models"
-```
-@inproceedings{cbms,
-  title={Concept bottleneck models},
-  author={Koh, Pang Wei and Nguyen, Thao and Tang, Yew Siang and Mussmann, Stephen and Pierson, Emma and Kim, Been and Liang, Percy},
-  booktitle={International conference on machine learning},
-  pages={5338--5348},
-  year={2020},
-  organization={PMLR}
-}
-```
+### 🎛️ Key Training Arguments
 
-- Post-hoc CBMs: "Post-hoc Concept Bottleneck Models"
-```
-@inproceedings{
-yuksekgonul2023posthoc,
-title={Post-hoc Concept Bottleneck Models},
-author={Mert Yuksekgonul and Maggie Wang and James Zou},
-booktitle={The Eleventh International Conference on Learning Representations },
-year={2023},
-url={https://openreview.net/forum?id=nA5AZ8CEyow}
-}
-```
-- Label-free CBMs: "Label-free Concept Bottleneck Models"
-```
-@inproceedings{oikarinenlabel,
-  title={Label-free Concept Bottleneck Models},
-  author={Oikarinen, Tuomas and Das, Subhro and Nguyen, Lam M and Weng, Tsui-Wei},
-  booktitle={International Conference on Learning Representations},
-  year={2023}
-}
-```
-- Concept Embedding Models: "Concept Embedding Models: Beyond the Accuracy-Explainability Trade-Off"
-```
-@article{EspinosaZarlenga2022cem,
-  title={Concept Embedding Models: Beyond the Accuracy-Explainability Trade-Off},
-  author={
-    Espinosa Zarlenga, Mateo and Barbiero, Pietro and Ciravegna, Gabriele and
-    Marra, Giuseppe and Giannini, Francesco and Diligenti, Michelangelo and
-    Shams, Zohreh and Precioso, Frederic and Melacci, Stefano and
-    Weller, Adrian and Lio, Pietro and Jamnik, Mateja
-  },
-  journal={Advances in Neural Information Processing Systems},
-  volume={35},
-  year={2022}
-}
+| Argument               | Description                                                 | Default    |
+| ---------------------- | ----------------------------------------------------------- | ---------- |
+| `--model`              | Backbone architecture (`resnet18`, `resnet50`, `resnet101`) | `resnet18` |
+| `--model_type`         | Architecture family (`resnet`, `vit`)                       | `resnet`   |
+| `--num_clfs`           | Number of intermediate semantic layers                      | 1          |
+| `--lattice_levels`     | Which lattice levels to use for supervision                 | —          |
+| `--backbone_layer_ids` | Which backbone blocks to attach semantic layers to          | —          |
+| `--concept_wts`        | Weight for attribute prediction loss (α)                    | 0.1        |
+| `--cls_wts`            | Weight for intermediate classifier loss (β)                 | 0.01       |
+| `--clf_special_init`   | Initialize classifiers using lattice structure              | `False`    |
+| `--exclusive_attrs`    | Use cumulative attribute sets across levels                 | `False`    |
+
+---
+
+## 📐 Evaluation
+
+### 📊 Cluster Impurity (CI) & Compactness (DBI) Metrics
+
+Evaluate the semantic quality of learned intermediate representations:
+
+```bash
+cd fca4nn
+
+CUDA_VISIBLE_DEVICES=0 python metric_calculator.py \
+    --dataset cifar100 \
+    --model_name OURS-2FCA::resnet50 \
+    --model_weights <path_to_trained_model.pt> \
+    --data_path ./DATA/cifar100/ \
+    --lattice_path ./DATA/lattices/cifar100_context.pkl \
+    --lattice_levels 1 2 \
+    --backbone_layer_ids 3 4 \
+    --metadata_path ./saved_models/metric_metadata/ \
+    --separation_score davies_bouldin \
+    --clustering_method kmeans
 ```
 
-- Language in a Bottle: "Language in a Bottle: Language Model Guided Concept Bottlenecks for Interpretable Image Classification"
-```
-@inproceedings{yang2023language,
-  title={Language in a bottle: Language model guided concept bottlenecks for interpretable image classification},
-  author={Yang, Yue and Panagopoulou, Artemis and Zhou, Shenghao and Jin, Daniel and Callison-Burch, Chris and Yatskar, Mark},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={19187--19197},
-  year={2023}
-}
-```
-- Stochastic CBMs: "Stochastic Concept Bottleneck Models"
-```
-@article{vandenhirtz2024stochastic,
-  title={Stochastic concept bottleneck models},
-  author={Vandenhirtz, Moritz and Laguna, Sonia and Marcinkevi{\v{c}}s, Ri{\v{c}}ards and Vogt, Julia},
-  journal={Advances in Neural Information Processing Systems},
-  volume={37},
-  pages={51787--51810},
-  year={2024}
+Supported model identifiers for `--model_name`:
+- **🟡 Ours:** `OURS-1FCA::resnet50`, `OURS-2FCA::resnet50`, `OURS-1FCA::vit_base_patch16_224`, `MCLCBM::resnet50`
+- **⚪ Baselines:** `CBM::resnet50`, `CEM::resnet50`, `SCBM::resnet50`, `PCBM::resnet50`, `MLPCBM::resnet50`, `PYTORCH::resnet50`, `CLIP::RN50`, `VIT::deit_base_patch16_224`
+
+### 🖼️ Qualitative Results: Cluster Visualizations
+
+<p align="center">
+  <img src="figures/clusters_qualitative.png" width="95%" alt="Qualitative CI/DBI cluster visualization"/>
+</p>
+
+> **Figure:** Qualitative visualization of clusters formed at intermediate network blocks. FoCA CBMs produce more semantically coherent clusters with lower impurity and better compactness compared to baselines.
+
+
+---
+
+## 🔬 Baselines
+
+We include implementations of several baselines adapted for our experimental setup. Each baseline folder contains its own `run.sh` and `README.md`:
+
+| Baseline       | Reference                |    Venue     | README |
+| -------------- | ------------------------ | :----------: | :----: |
+| Post-hoc CBM   | Yuksekgonul et al.       |  ICLR 2023   | [→ Instructions](baselines/post-hoc-cbm/README.md) |
+| Label-free CBM | Oikarinen et al.         |  ICLR 2023   | [→ Instructions](baselines/Label-free-CBM/README.md) |
+| CEM            | Espinosa Zarlenga et al. | NeurIPS 2022 | [→ Instructions](baselines/cem/README.md) |
+| LaBo           | Yang et al.              |  CVPR 2023   | [→ Instructions](baselines/LaBo/README.md) |
+| SCBM           | Vandenhirtz et al.       | NeurIPS 2024 | [→ Instructions](baselines/SCBM/README.md) |
+| CF-CBM         | Panousis et al.          | NeurIPS 2024 | [→ Instructions](baselines/Coarse-To-Fine-CBMs/README.md) |
+| HybridCBM      | Liu et al.               |  CVPR 2025   | [→ Instructions](baselines/HybridCBM/README.md) |
+
+---
+
+## 📝 Citation
+
+If you find this work useful, please cite:
+
+```bibtex
+@inproceedings{focacbms2026,
+  title={Lattices for Concept-Based Learning},
+  author={Vemuri, Deepika SN and Adhikari, Sayanta and Saha, Ankit and Kher, Krishn Vishwas and Balasubramanian, Vineeth N},
+  booktitle={International Conference on Machine Learning (ICML)},
+  year={2026}
 }
 ```
 
-- Probabilistic CBMs: "Probabilistic Concept Bottleneck Models"
-```
-@article{Kim2023ProbabilisticCB,
-  title={Probabilistic Concept Bottleneck Models},
-  author={Eunji Kim and Dahuin Jung and Sangha Park and Siwon Kim and Sung-Hoon Yoon},
-  journal={ArXiv},
-  year={2023},
-  volume={abs/2306.01574},
-  url={https://api.semanticscholar.org/CorpusID:259063823}
-}
-```
+---
 
-- Coarse-to-Fine CBMs: "Coarse-to-Fine Concept Bottleneck Models"
-```
-@inproceedings{
-panousis2024coarsetofine,
-title={Coarse-to-Fine Concept Bottleneck Models},
-author={Konstantinos P. Panousis and Dino Ienco and Diego Marcos},
-booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
-year={2024},
-url={https://openreview.net/forum?id=RMdnTnffou}
-}
-``` 
-
-- Hybrid CBMs: "Hybrid Concept Bottleneck Models"
-```
-@inproceedings{liu2025hybrid,
-  title={Hybrid Concept Bottleneck Models},
-  author={Liu, Yang and Zhang, Tianwei and Gu, Shi},
-  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
-  pages={20179--20189},
-  year={2025}
-}
-```
+<p align="center">
+  ⭐ If you find this repository helpful, please consider giving it a star!
+</p>

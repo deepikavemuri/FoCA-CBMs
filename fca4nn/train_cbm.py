@@ -1,3 +1,13 @@
+"""
+Training script for the standard (flat) Concept Bottleneck Model (CBM) baseline.
+
+This trains a single-level CBM where all concepts are predicted from the final backbone
+features and a single classifier maps concepts to classes. The loss is:
+    total_loss = cross_entropy(class_preds, labels) + concept_wts * BCE(concept_preds, concept_labels)
+
+This serves as a baseline comparison against the hierarchical FoCA-CBM approach.
+"""
+
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -28,13 +38,14 @@ import wandb
 
 
 def filter_out_specific_info(record):
-    # Exclude a specific logger.info message
+    """Filter out batch-level INFO logs from console output to reduce noise."""
     if record["level"].name == "INFO" and "Batch" in record["message"]:
-        return False  # Exclude this log message
+        return False
     return True
 
 
 def set_seed(seed=42):
+    """Set random seeds for reproducibility across all libraries."""
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
@@ -45,6 +56,14 @@ def set_seed(seed=42):
 
 @torch.inference_mode()
 def validate(args, model, val_dataset, epoch=None, logger=None):
+    """
+    Run validation/test evaluation. Computes classification accuracy, attribute
+    prediction accuracy, and combined loss over the entire dataset.
+
+    Returns:
+        loss: Average combined loss over all batches.
+        cls_acc: Average classification accuracy.
+    """
     valloader = DataLoader(
         val_dataset,
         batch_size=args.batch_size,
@@ -66,15 +85,19 @@ def validate(args, model, val_dataset, epoch=None, logger=None):
 
         concepts, classes = model(imgs.cuda())
 
+        # Classification accuracy via argmax (single-label)
         classification_acc = (
             sum(torch.argmax(classes.cpu(), dim=-1) == cls) / imgs.shape[0]
         )
         cls_acc += classification_acc.detach().numpy().mean().item()
 
+        # Attribute accuracy via rounding sigmoid outputs (multi-label)
         attribute_acc = (
             sum(torch.round(F.sigmoid(concepts).cpu()) == attrs) / imgs.shape[0]
         )
         attr_acc += attribute_acc.detach().numpy().mean().item()
+
+        # Combined loss: CE for classes + weighted BCE for concepts
         attr_loss = binary_crossentropy(
             F.sigmoid(concepts), attrs.to(torch.float32).cuda()
         ).mean()
@@ -98,7 +121,14 @@ def validate(args, model, val_dataset, epoch=None, logger=None):
 
 
 def train_and_validate(args, model, train_dataset, val_dataset, logger=None):
-    top_checkpoints = []  # Min-heap to track top 5 (val_acc, path)
+    """
+    Train the flat CBM model and periodically validate.
+
+    Training jointly optimizes concept prediction (BCE) and class prediction (CE).
+    Maintains a min-heap of top-k checkpoints by validation accuracy, pruning older
+    ones. After training completes, loads and returns the best model.
+    """
+    top_checkpoints = []  # Min-heap: (val_acc, -epoch, path) for top-k management
 
     trainloader = DataLoader(
         train_dataset,
@@ -138,12 +168,14 @@ def train_and_validate(args, model, train_dataset, val_dataset, logger=None):
 
             opt.zero_grad()
 
+            # Track classification accuracy (argmax for single-label)
             classification_acc = (
                 sum(torch.argmax(classes.cpu(), dim=-1) == cls) / imgs.shape[0]
             )
             cls_acc += classification_acc.detach().numpy().mean().item()
             cls_loss = ce_loss(classes, cls.cuda())
 
+            # Track attribute accuracy (threshold at 0.5 for multi-label)
             attribute_acc = (
                 sum(torch.round(F.sigmoid(concepts).cpu()) == attrs) / imgs.shape[0]
             )
@@ -151,6 +183,8 @@ def train_and_validate(args, model, train_dataset, val_dataset, logger=None):
             attr_loss = bce_loss(
                 F.sigmoid(concepts), attrs.to(torch.float32).cuda()
             ).mean()
+
+            # Joint loss: classification + weighted concept prediction
             loss = cls_loss + args.concept_wts * attr_loss
             running_loss += loss.item()
             loss.backward()
@@ -200,8 +234,8 @@ def train_and_validate(args, model, train_dataset, val_dataset, logger=None):
             if val_acc > best_val_acc:
                 best_val_acc = val_acc
 
+    # Load the best checkpoint by validation accuracy
     all_paths = glob(os.path.join(args.save_model_dir, "*.pt"))
-    # sort by val_acc and load the best model
     all_paths.sort(key=lambda x: float(x.split("_")[-1].split(".")[1]), reverse=True)
     best_model_path = all_paths[0]
     log_and_print(f"Best model saved at {best_model_path}", logger)

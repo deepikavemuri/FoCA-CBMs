@@ -1,3 +1,14 @@
+"""
+Generate an FCA (Formal Concept Analysis) lattice from a class-attribute annotated dataset.
+
+Takes a JSON file mapping class names to their attribute lists, constructs the binary
+cross-table (objects x attributes), builds the formal context using the `concepts` library,
+and saves the resulting context (including its lattice) as a pickle file.
+
+Usage:
+    python generate_lattice.py path/to/concepts.json -o output_lattice.pkl -v
+"""
+
 import numpy as np
 import argparse
 import pickle
@@ -17,7 +28,10 @@ def build_parser():
 
 
 def prepare_and_save_lattice(args):
-
+    """
+    Build and save the FCA formal context from a class-attribute JSON file.
+    The JSON should map class names to lists of attribute strings.
+    """
     with open(args.dataset, 'r') as infile:
         dataset = json.load(infile)
 
@@ -25,6 +39,7 @@ def prepare_and_save_lattice(args):
     for cls in dataset:
         all_attributes.update(dataset[cls])
 
+    # Build binary incidence matrix (classes x attributes)
     cross_table = np.zeros((len(dataset), len(all_attributes)))
     for i, cls in enumerate(dataset):
         for j, attr in enumerate(all_attributes):
@@ -32,8 +47,8 @@ def prepare_and_save_lattice(args):
                 cross_table[i, j] = 1
 
     formal_context = concepts.Context(
-        list(dataset.keys()), 
-        all_attributes, 
+        list(dataset.keys()),
+        all_attributes,
         cross_table
     )
     with open(args.output, 'wb') as outfile:
@@ -43,7 +58,7 @@ def prepare_and_save_lattice(args):
 
 
 def print_lattice_details(dataset, all_attributes, cross_table, formal_context):
-    
+    """Print summary statistics about the generated lattice structure."""
     print('Number of classes:', len(dataset))
     print('Number of attributes:', len(all_attributes))
     print('Average number of attributes per class:', np.mean(np.sum(cross_table, axis=1)))

@@ -1,3 +1,17 @@
+"""
+Training script for FoCA-N (Multi-Class Level CBM) baseline.
+
+FoCA-N is a sequential multi-level concept model where:
+  - Level 1 concepts are predicted from backbone features.
+  - Level 2 concepts are predicted from level 1 concept outputs.
+  - The final classifier predicts from level 2 concept outputs.
+
+Unlike FoCA-CBM which taps intermediate backbone layers, FoCA-N extracts all features
+from the final backbone layer and passes them through a sequential concept chain.
+The loss is:
+    total_loss = CE(class_preds, labels) + concept_wts * (BCE(attr1) + BCE(attr2))
+"""
+
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -29,13 +43,14 @@ from processing.utils import get_info_from_lattice
 
 
 def filter_out_specific_info(record):
-    # Exclude a specific logger.info message
+    """Filter out batch-level INFO logs from console output to reduce noise."""
     if record["level"].name == "INFO" and "Batch" in record["message"]:
-        return False  # Exclude this log message
+        return False
     return True
 
 
 def set_seed(seed=42):
+    """Set random seeds for reproducibility across all libraries."""
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
@@ -46,6 +61,14 @@ def set_seed(seed=42):
 
 @torch.inference_mode()
 def validate(args, model, val_dataset, epoch=None, logger=None):
+    """
+    Run validation/test evaluation for FoCA-N.
+    Computes classification accuracy and per-level attribute prediction accuracy.
+
+    Returns:
+        loss: Average combined loss over all batches.
+        cls_acc: Average classification accuracy.
+    """
     valloader = DataLoader(
         val_dataset,
         batch_size=args.batch_size,
@@ -67,11 +90,13 @@ def validate(args, model, val_dataset, epoch=None, logger=None):
 
         attr1_pred, attr2_pred, classes = model(imgs.cuda())
 
+        # Classification accuracy (single-label via argmax)
         classification_acc = (
             sum(torch.argmax(classes.cpu(), dim=-1) == cls) / imgs.shape[0]
         )
         cls_acc += classification_acc.detach().numpy().mean().item()
 
+        # Per-level attribute accuracy (multi-label via threshold)
         attribute1_acc = (
             sum(torch.round(F.sigmoid(attr1_pred).cpu()) == attrs_present[0])
             / imgs.shape[0]
@@ -83,6 +108,7 @@ def validate(args, model, val_dataset, epoch=None, logger=None):
         )
         attr2_acc += attribute2_acc.detach().numpy().mean().item()
 
+        # Per-level concept losses (BCE on sigmoid outputs)
         attr1_loss = binary_crossentropy(
             F.sigmoid(attr1_pred), attrs_present[0].to(torch.float32).cuda()
         ).mean()
@@ -110,7 +136,18 @@ def validate(args, model, val_dataset, epoch=None, logger=None):
 
 
 def train_and_validate(args, model, train_dataset, val_dataset, logger=None):
-    top_checkpoints = []  # Min-heap to track top 5 (val_acc, path)
+    """
+    Train the FoCA-N model and periodically validate.
+
+    Jointly optimizes:
+      - Level 1 concept prediction (BCE on coarse attributes)
+      - Level 2 concept prediction (BCE on fine attributes)
+      - Final classification (cross-entropy)
+
+    Maintains a min-heap of top-k checkpoints by validation accuracy.
+    After training, loads and returns the best model.
+    """
+    top_checkpoints = []  # Min-heap: (val_acc, -epoch, path) for top-k management
 
     trainloader = DataLoader(
         train_dataset,
@@ -119,9 +156,6 @@ def train_and_validate(args, model, train_dataset, val_dataset, logger=None):
         pin_memory=True,
         drop_last=False,
     )
-    # for x in trainloader:
-    # print(x[1].shape, x[2], x[3][0][-5], x[4][0][-5])
-    # exit(0)
 
     if args.wandb:
         wandb.init(project="fca_mclcbm", entity="ai21btech11004", config=args)
@@ -153,17 +187,21 @@ def train_and_validate(args, model, train_dataset, val_dataset, logger=None):
 
             opt.zero_grad()
 
+            # Classification accuracy (single-label)
             classification_acc = (
                 sum(torch.argmax(classes.cpu(), dim=-1) == cls) / imgs.shape[0]
             )
             cls_acc += classification_acc.detach().numpy().mean().item()
             cls_loss = ce_loss(classes, cls.cuda())
 
+            # Level 1 attribute accuracy and loss
             attribute1_acc = (
                 sum(torch.round(F.sigmoid(attr1_pred).cpu()) == attrs_present[0])
                 / imgs.shape[0]
             )
             attr1_acc += attribute1_acc.detach().numpy().mean().item()
+
+            # Level 2 attribute accuracy and loss
             attribute2_acc = (
                 sum(torch.round(F.sigmoid(attr2_pred).cpu()) == attrs_present[1])
                 / imgs.shape[0]
@@ -176,6 +214,8 @@ def train_and_validate(args, model, train_dataset, val_dataset, logger=None):
             attr2_loss = bce_loss(
                 F.sigmoid(attr2_pred), attrs_present[1].to(torch.float32).cuda()
             ).mean()
+
+            # Joint loss: classification + weighted sum of both concept levels
             loss = cls_loss + args.concept_wts * (attr1_loss + attr2_loss)
 
             running_loss += loss.item()
@@ -228,8 +268,8 @@ def train_and_validate(args, model, train_dataset, val_dataset, logger=None):
             if val_acc > best_val_acc:
                 best_val_acc = val_acc
 
+    # Load the best checkpoint by validation accuracy
     all_paths = glob(os.path.join(args.save_model_dir, "*.pt"))
-    # sort by val_acc and load the best model
     all_paths.sort(key=lambda x: float(x.split("_")[-1].split(".")[1]), reverse=True)
     best_model_path = all_paths[0]
     log_and_print(f"Best model saved at {best_model_path}", logger)

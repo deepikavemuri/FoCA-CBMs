@@ -1,3 +1,12 @@
+"""
+Cluster purity metric computation.
+
+Extracts layer-wise embeddings from a model using forward hooks, clusters them
+(KMeans/Spectral/Agglomerative), and measures how well the clusters align with
+ground-truth class labels via purity (Gini/entropy/impurity), separation scores
+(silhouette/Calinski-Harabasz/Davies-Bouldin), mutual information, and ARI.
+"""
+
 import os
 from tqdm.auto import tqdm
 from collections import OrderedDict, Counter
@@ -22,6 +31,7 @@ from sklearn.metrics import (
 
 
 def convert_to_builtin_types(obj):
+    """Recursively convert numpy types to Python builtins for JSON serialization."""
     if isinstance(obj, dict):
         return {k: convert_to_builtin_types(v) for k, v in obj.items()}
     elif isinstance(obj, list):
@@ -33,6 +43,10 @@ def convert_to_builtin_types(obj):
 
 
 class ClusterPurityMetric:
+    """
+    Evaluates representational quality by clustering layer-wise embeddings and
+    measuring alignment with ground-truth class labels.
+    """
     def __init__(self, model, layers, is_vit=False, args=None):
         self.model = model
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

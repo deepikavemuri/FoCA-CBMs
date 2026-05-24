@@ -1,4 +1,9 @@
 # -*- coding: utf-8 -*-
+"""
+Training utilities: optimizer/scheduler construction, loss computation, accuracy tracking,
+and logging helpers shared across all training scripts.
+"""
+
 import torch
 import wandb
 import torch.nn as nn
@@ -16,6 +21,7 @@ from losses import *
 
 
 def get_scheduler(opt, args, trainloader):
+    """Create a learning rate scheduler based on args.scheduler. Steps per-batch."""
     if args.scheduler == "onecycle":
         scheduler = CyclicLR(
             opt,
@@ -49,6 +55,10 @@ def get_scheduler(opt, args, trainloader):
 
 
 def get_optimizer(model, args):
+    """
+    Create optimizer. When varying_lrs is set, uses separate learning rates for the
+    backbone vs. each concept/classifier level (higher LR for deeper levels).
+    """
     if args.varying_lrs:
         opt = AdamW(
             [
@@ -107,6 +117,7 @@ def complete_logging(
     attr_auc,
     mode="train",
 ):
+    """Log all per-level metrics (accuracy, AUC, 0/1 breakdown) for train/val/test."""
     if mode == "train":
         logger_name = "Training"
         wandb_name = "train"
@@ -180,6 +191,7 @@ def complete_logging(
 
 
 def get_loss(loss_name):
+    """Map loss name string to the corresponding loss function."""
     if loss_name == "bce":
         return binary_crossentropy
     elif loss_name == "focal":
@@ -205,6 +217,13 @@ def calculate_loss_and_accuracy(
     attr_acc,
     args,
 ):
+    """
+    Compute per-level losses and accumulate accuracies.
+
+    Intermediate classifiers (all except last) use multi-label BCE-style losses since
+    they predict class membership vectors. The final classifier uses cross-entropy since
+    it predicts a single class via softmax.
+    """
     attr_loss_fn = get_loss(args.attr_loss)
     pre_final_clf_loss = get_loss(args.pre_final_clf_loss)
     final_clf_loss = get_loss(args.final_clf_loss)

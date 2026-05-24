@@ -1,3 +1,16 @@
+"""
+Cluster purity metric evaluation script.
+
+Loads a trained model (FoCA-CBM, CBM, CLIP, vanilla ResNet/ViT, etc.), extracts
+layer-wise embeddings on a test set, clusters them, and computes purity/separation
+metrics to measure how well each layer's representations group semantically similar classes.
+
+Supports multiple model types via a "BASE::model_name" naming convention:
+  - PYTORCH::resnet50, CLIP::RN50, VIT::vit_base_patch16_224
+  - CBM::resnet50, SCBM::resnet50, PCBM::resnet50, MLPCBM::resnet50
+  - OURS-1FCA::resnet50, OURS-2FCA::resnet50, MCLCBM::resnet50
+"""
+
 import argparse
 import torch
 from torchvision.models import resnet50, ResNet50_Weights, resnet18, ResNet18_Weights
@@ -18,6 +31,7 @@ from timm import create_model
 
 
 def get_dataset_info(dataset_name):
+    """Return (num_attributes, num_classes, expand_dim) for each supported dataset."""
     if dataset_name == "inet100":
         return 700, 100, 400
     if dataset_name == "cifar100":
@@ -31,7 +45,7 @@ def get_dataset_info(dataset_name):
 
 
 def main(args):
-    # get model seperations
+    # Parse model specification: "BASE::backbone_name"
     base, model_name = args.model_name.split("::")
     if base == "CLIP":
         model, _ = clip.load(model_name, device="cpu", download_root=args.metadata_path)

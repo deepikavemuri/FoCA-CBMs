@@ -1,7 +1,18 @@
+"""
+Utilities for FCA lattice processing, dataset preparation, and metric computation.
+
+Key functions:
+  - get_info_from_lattice: Extracts per-level concept sets and formal concepts from
+    a pickled FCA lattice, forming the basis for the hierarchical concept structure.
+  - MetricCalculator: Tracks class-wise and attribute-wise 0/1 accuracy and AUC
+    across training/validation batches.
+  - MultiLabelMetrics: Computes standard multi-label metrics (Hamming, F1, Jaccard, etc.)
+"""
+
 import pandas as pd
 import json
 import numpy as np
-import pickle
+import pickle  # noqa: S301 - pickle used for FCA lattice objects from trusted local files
 import torch
 import os
 from collections import defaultdict
@@ -235,7 +246,24 @@ def get_fc2attrmatrix(fc, attr_l):
 
 
 def get_info_from_lattice(lattice_path, lattice_levels, make_exclusive=False):
+    """
+    Extract concept sets and formal concepts from the FCA lattice at specified hierarchy levels.
+
+    The lattice is topologically sorted, levels are computed by longest path from infimum,
+    and concepts at each requested level are collected. Returns:
+      - perlevel_intents: List of attribute name lists (one per requested level).
+      - perlevel_fcs: List of formal concept objects (one list per level), used to
+        derive class co-occurrence (which classes share a formal concept).
+
+    Args:
+        lattice_path: Path to .pkl (concepts library context) or .json lattice file.
+        lattice_levels: Which hierarchy levels to extract (sorted descending internally).
+        make_exclusive: If True, removes attributes that appear in earlier levels from
+            later levels so each attribute belongs to exactly one level.
+    """
+
     def toposort_lattice(lattice):
+        """Topological sort of lattice concepts using upper-neighbor edges."""
         G = nx.DiGraph()
         for concept in lattice:
             G.add_node(concept)
@@ -245,6 +273,7 @@ def get_info_from_lattice(lattice_path, lattice_levels, make_exclusive=False):
         return sorted_concepts
 
     def compute_levels(concepts):
+        """Assign each concept a level = longest path from the infimum (bottom)."""
         level = {}
         for concept in concepts:
             extent, intent = concept
@@ -261,6 +290,7 @@ def get_info_from_lattice(lattice_path, lattice_levels, make_exclusive=False):
         return level
 
     def compute_hierarchy(concepts, level):
+        """Group concepts by their level number."""
         hierarchy = {}
         for concept in concepts:
             extent, intent = concept
@@ -535,6 +565,15 @@ class MultiLabelMetrics:
 
 
 class MetricCalculator:
+    """
+    Tracks per-level classification and attribute metrics across batches.
+    Computes:
+      - Per-class 0/1 accuracy: how well the model predicts positive vs. negative labels.
+      - AUC: area under ROC curve for both classifier and attribute predictions.
+    Intermediate classifiers (multi-label) track 0/1 accuracy; the final classifier
+    uses argmax-based accuracy (tracked separately in the training loop).
+    """
+
     def __init__(self, num_clfs):
         self.num_clfs = num_clfs
         self.cls_01_common = {"0": [0] * (num_clfs - 1), "1": [0] * (num_clfs - 1)}

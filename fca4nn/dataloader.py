@@ -1,3 +1,14 @@
+"""
+Dataset classes for FoCA-CBM training. Each dataset provides:
+  - Image tensor
+  - Class label
+  - Per-level concept (attribute) binary vectors derived from the FCA lattice
+  - Per-level class co-occurrence vectors (which other classes share the same
+    formal concepts at each level, used as soft targets for intermediate classifiers)
+
+Supported datasets: ImageNet-100, AWA2, CIFAR-100.
+"""
+
 import pandas as pd
 import torchvision
 from torchvision.transforms import *
@@ -26,6 +37,10 @@ NUM_CLASSES = 100
 
 
 class ImagenetMultiClassLevelsDataset(Dataset):
+    """
+    ImageNet-100 dataset with multi-level concept annotations from the FCA lattice.
+    Returns per-level binary concept vectors and class co-occurrence vectors.
+    """
     def __init__(
         self,
         lattice_levels,
@@ -150,6 +165,12 @@ class ImagenetMultiClassLevelsDataset(Dataset):
         return class_list
 
     def get_classes_per_level(self, num_classes):
+        """
+        Pre-compute class co-occurrence vectors for each (label, level) pair.
+        For a given class at a given level, marks all classes that share at least
+        one formal concept with it at that level. These vectors serve as soft
+        supervision targets for intermediate classifiers.
+        """
         labels = list(range(num_classes))
         self.classes_present_perlevel_perlabel = [
             [np.zeros(num_classes) for _ in range(len(self.lattice_levels))]
@@ -168,6 +189,7 @@ class ImagenetMultiClassLevelsDataset(Dataset):
         image = Image.open(image_name).convert("RGB")
         image = self.transforms(image)
 
+        # Build per-level binary concept vectors from class-attribute mapping
         attrs = self.class_concept_dict[self.class_label_map[label]]
         attr_values_perlevel = [[] for _ in range(len(self.lattice_levels))]
 
@@ -195,6 +217,11 @@ class ImagenetMultiClassLevelsDataset(Dataset):
 
 
 class Imagenet100ConceptDataset(Dataset):
+    """
+    Flat (non-hierarchical) ImageNet-100 concept dataset for the standard CBM baseline.
+    Returns a single concept vector (all concepts in one flat layer) per sample.
+    """
+
     def __init__(
         self,
         data_root=DATA_ROOT + "inet100/",
@@ -308,6 +335,11 @@ class Imagenet100ConceptDataset(Dataset):
 
 
 class Awa2ClassLevelDataset(Dataset):
+    """
+    AWA2 (Animals with Attributes 2) dataset with multi-level FCA concept annotations.
+    Supports both full (50-class) and few-shot (seen classes only) splits.
+    """
+
     def __init__(
         self,
         lattice_levels,
@@ -547,6 +579,11 @@ class Awa2ClassLevelDataset(Dataset):
 
 
 class AnimalLoader(Dataset):
+    """
+    Flat AWA2 dataset for the standard CBM baseline. Uses the original 85 binary
+    predicate attributes from the predicate-matrix-binary.txt file.
+    """
+
     def __init__(
         self,
         data_dir=DATA_ROOT + "AWA2/Animals_with_Attributes2",
@@ -639,6 +676,11 @@ class AnimalLoader(Dataset):
 
 
 class Cifar100ClassLevelDataset(Dataset):
+    """
+    CIFAR-100 dataset with multi-level FCA concept annotations.
+    Wraps torchvision's CIFAR100 with lattice-derived concept vectors.
+    """
+
     def __init__(
         self,
         lattice_levels,
@@ -780,6 +822,8 @@ class Cifar100ClassLevelDataset(Dataset):
 
 
 class Cifar100Loader(Dataset):
+    """Flat CIFAR-100 dataset for the standard CBM baseline (non-hierarchical concepts)."""
+
     def __init__(
         self,
         data_dir=DATA_ROOT + "cifar100",

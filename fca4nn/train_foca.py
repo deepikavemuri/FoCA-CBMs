@@ -1,3 +1,16 @@
+"""
+Training and validation loop for FoCA-CBM (main method).
+
+The training procedure jointly optimizes:
+  - Concept (attribute) prediction at each lattice level via BCE/focal/dice loss.
+  - Intermediate classifiers via multi-label loss (predicting class membership vectors
+    based on which classes share the same formal concepts).
+  - Final classifier via cross-entropy (standard single-label classification).
+
+Supports sequential training (freeze deeper levels initially), L1 regularization
+on classifier weights, gradient clipping, and top-k checkpoint management.
+"""
+
 import torch
 import torch.nn.functional as F
 
@@ -14,6 +27,11 @@ import time
 
 
 def get_cls_probabilities(class_preds, num_clfs):
+    """
+    Convert raw class logits to probabilities:
+    - Intermediate levels: sigmoid (multi-label class membership).
+    - Final level: softmax (single-label classification).
+    """
     for num_clf in range(num_clfs - 1):
         class_preds[num_clf] = F.sigmoid(class_preds[num_clf])
     class_preds[-1] = F.softmax(class_preds[-1], dim=-1)
@@ -91,6 +109,11 @@ def validate(epoch, args, val_dataset, model, num_clfs, logger=None, val=True):
 def train_and_validate(
     args, train_dataset, val_dataset, test_dataset, model, num_clfs=1, logger=None
 ):
+    """
+    Main training loop. Trains the FoCA-CBM model with multi-level concept and
+    classification losses. Manages checkpoint saving (top-k by validation accuracy),
+    optional sequential training, and post-training evaluation on the test set.
+    """
     if args.wandb:
         wandb.init(project="fca_intsem", entity="user", config=args)
         wandb.run.name = f"fca4nn_{args.dataset}_{wandb.run.name}"

@@ -1,3 +1,8 @@
+"""
+Lattice graph utilities: topological sorting, level computation, and memory measurement
+for FCA concept lattices.
+"""
+
 import sys
 import networkx as nx
 from types import ModuleType, FunctionType
@@ -5,16 +10,21 @@ from gc import get_referents
 
 
 def toposort_lattice(lattice):
+    """Topologically sort lattice concepts from infimum upward via upper_neighbors edges."""
     G = nx.DiGraph()
     for concept in lattice:
         G.add_node(concept)
         for upper in concept.upper_neighbors:
-            G.add_edge(concept, upper) 
+            G.add_edge(concept, upper)
     sorted_concepts = list(nx.topological_sort(G))
     return sorted_concepts
 
 
 def compute_levels(concepts):
+    """
+    Assign each concept a level number based on longest path from the infimum.
+    Level 0 = infimum (most general), higher levels = more specific concepts.
+    """
     level = {}
     for concept in concepts:
         extent, intent = concept
@@ -30,6 +40,7 @@ def compute_levels(concepts):
 
 
 def compute_hierarchy(concepts, level):
+    """Group formal concepts by their computed level number."""
     hierarchy = {}
     for concept in concepts:
         extent, intent = concept
@@ -42,7 +53,7 @@ def compute_hierarchy(concepts, level):
 
 
 def getsize(obj):
-    """ https://stackoverflow.com/a/30316760 """
+    """Recursively compute total memory size (bytes) of an object and all its referents."""
     BLACKLIST = type, ModuleType, FunctionType
     if isinstance(obj, BLACKLIST):
         raise TypeError('getsize() does not take argument of type: '+ str(type(obj)))
