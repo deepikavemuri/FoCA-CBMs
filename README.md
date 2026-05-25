@@ -1,7 +1,6 @@
-# 🧩 Formal Concept Lattices are Good Semantic Scaffolds for Concept-Based Learning
+# Formal Concept Lattices are Good Semantic Scaffolds for Concept-Based Learning
 
 <p align="center">
-  <b>Lattices for Concept-Based Learning</b><br>
   <i>ICML 2026</i>
 </p>
 
@@ -14,24 +13,23 @@
   <img src="figures/foca_cbms.png" width="90%" alt="FoCA-CBMs Overview"/>
 </p>
 
-> **Figure:** A formal concept lattice is constructed from class-attribute associations *(top)*. The lattice's hierarchical levels are aligned with intermediate network blocks using class-cluster density, enabling staged semantic supervision throughout the network's depth *(bottom)*.
+> A formal concept lattice is constructed from class-attribute associations *(top)*. The lattice's hierarchical levels are aligned with intermediate network blocks using class-cluster density, enabling staged semantic supervision throughout the network's depth *(bottom)*.
 
 ---
 
 ## 🔍 Overview
 
-Concept-based models (CBMs) learn interpretable predictions by routing classification through human-understandable concepts. However, existing CBMs treat all concepts as a flat set learned at a single network layer, ignoring the hierarchical nature of both human semantic understanding and neural network representations.
+Concept-based models (CBMs) learn to perform downstream tasks through interpretable concepts. However, existing CBMs treat all concepts as a flat set learned at a single network layer, ignoring the inherent hierarchical nature of both human semantic understanding and neural network representations.
 
-**FoCA-CBMs** leverage *Formal Concept Analysis* (FCA) to construct principled semantic lattices from class-attribute relationships. These lattices identify natural supervision points in the network — general concepts (shared by many classes) supervise early layers, while specific concepts (shared by few) supervise deeper layers. This creates a *semantic scaffold* over the network's visual feature hierarchy, enabling:
+We introduce **FoCA-CBMs**, drawing on *Formal Concept Analysis* (FCA), to construct principled semantic lattices from class-attribute relationships. These lattices identify natural supervision points in the network — general concepts (shared by many classes) supervise early layers, while specific concepts (shared by few) supervise deeper layers. This creates a *semantic scaffold* over the network's visual feature hierarchy, enabling:
 
-- 🏗️ Hierarchically structured concept representations across network depth
-- 📊 More semantically meaningful intermediate embeddings (lower cluster impurity and compactness scores)
-- 🔧 Effective multi-level concept interventions
-- 🎯 Competitive or superior classification accuracy
+- Hierarchically structured concept representations across network depth
+- More semantically meaningful intermediate embeddings (lower cluster impurity and compactness scores)
+- Effective multi-level concept interventions
 
 ---
 
-## ⚙️ Installation
+## ⚙️ Setup
 
 ```bash
 # Clone the repository
