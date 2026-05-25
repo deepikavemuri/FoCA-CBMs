@@ -215,7 +215,7 @@ Supported model identifiers for `--model_name`:
   <img src="figures/clusters_qualitative.png" width="95%" alt="Qualitative CI/DBI cluster visualization"/>
 </p>
 
-> **Figure:** Qualitative visualization of clusters formed at intermediate network blocks. FoCA CBMs produce more semantically coherent clusters with lower impurity and better compactness compared to baselines.
+> Qualitative visualization of clusters formed at intermediate network blocks. FoCA CBMs produce more semantically coherent clusters with lower impurity and better compactness compared to baselines.
 
 
 ---
