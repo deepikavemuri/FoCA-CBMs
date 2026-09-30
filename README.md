@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://arxiv.org/abs/XXXX.XXXXX"><img src="https://img.shields.io/badge/arXiv-Paper-red"></a>
+  <a href="[https://arxiv.org/abs/XXXX.XXXXX](https://arxiv.org/abs/2606.05471)"><img src="https://img.shields.io/badge/arXiv-Paper-red"></a>
   <a href="#citation"><img src="https://img.shields.io/badge/ICML-2026-blue"></a>
 </p>
 
@@ -242,7 +242,7 @@ If you find this work useful, please cite:
 
 ```bibtex
 @inproceedings{focacbms2026,
-  title={Lattices for Concept-Based Learning},
+  title={Formal Concept Lattices are Good Semantic Scaffolds for Concept-Based Learning},
   author={Vemuri, Deepika SN and Adhikari, Sayanta and Saha, Ankit and Kher, Krishn Vishwas and Balasubramanian, Vineeth N},
   booktitle={International Conference on Machine Learning (ICML)},
   year={2026}
